@@ -2,7 +2,7 @@ spring:
   datasource:
     password: andrimbavy123
     username: postgres
-    url: jdbc:postgresql://localhost:5432/andriambavy
+    url: jdbc:postgresql://localhost:5432/mercadeo
     driverClassName: org.postgresql.Driver
   jpa:
     show-sql: true

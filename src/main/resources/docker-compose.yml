@@ -14,10 +14,10 @@ services:
   sftp:
     image: atmoz/sftp
     volumes:
-    - /Users/ilyas/Desktop/projects/andriambavy/cdn:/home/andriambavy/cdn
+    - /Users/ilyas/Desktop/projects/mercadeo/cdn:/home/mercadeo/cdn
     ports:
       - "2222:22"
-    command: andriambavy:andriambavy:1001
+    command: mercadeo:mercadeo:1001
 
 #  adminer:
 #    image: adminer
