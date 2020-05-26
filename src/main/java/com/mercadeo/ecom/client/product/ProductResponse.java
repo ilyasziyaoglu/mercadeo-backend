@@ -2,11 +2,11 @@ package com.mercadeo.ecom.client.product;
 
 import com.mercadeo.ecom.category.db.entity.Category;
 import com.mercadeo.ecom.client.brand.BrandResponse;
+import com.mercadeo.ecom.client.productcolor.ProductColorResponse;
 import com.mercadeo.ecom.client.productsize.SizeResponse;
 import com.mercadeo.ecom.client.stock.StockResponse;
 import com.mercadeo.ecom.common.basemodel.response.BaseResponse;
 import com.mercadeo.ecom.common.enums.Status;
-import com.mercadeo.ecom.productcolor.db.entity.ProductColor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -32,9 +32,12 @@ public class ProductResponse extends BaseResponse {
 	private Category category3;
 	private String collection;
 	private Status status;
-	private List<ProductColor> productColors;
+	private List<ProductColorResponse> productColors;
 	private List<SizeResponse> sizes;
 	private List<StockResponse> stocks;
-	private String infos;
+	private Boolean isColorsOptional;
+	private Boolean isSizesOptional;
+	private String description;
+	private String features;
 	private String tags;
 }

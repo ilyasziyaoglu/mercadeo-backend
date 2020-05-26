@@ -27,8 +27,8 @@ public class Size extends AbstractBaseEntity {
 	@GeneratedValue(generator = "sizes_id_gen", strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@Column(name = "size")
-	private String size;
+	@Column(name = "name")
+	private String name;
 
 	@Override
 	public Long getId() {

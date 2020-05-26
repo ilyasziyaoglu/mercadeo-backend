@@ -7,6 +7,8 @@ import com.mercadeo.ecom.client.color.ColorRequest;
 import com.mercadeo.ecom.client.color.ColorResponse;
 import com.mercadeo.ecom.client.product.ProductRequest;
 import com.mercadeo.ecom.client.product.ProductResponse;
+import com.mercadeo.ecom.client.productcolor.ProductColorRequest;
+import com.mercadeo.ecom.client.productcolor.ProductColorResponse;
 import com.mercadeo.ecom.client.productsize.SizeRequest;
 import com.mercadeo.ecom.client.productsize.SizeResponse;
 import com.mercadeo.ecom.client.stock.StockRequest;
@@ -23,7 +25,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-05-24T17:28:56+0300",
+    date = "2020-05-26T21:43:13+0300",
     comments = "version: 1.3.0.Beta2, compiler: javac, environment: Java 1.8.0_241 (Oracle Corporation)"
 )
 @Component
@@ -47,14 +49,14 @@ public class ProductMapperImpl implements ProductMapper {
         product.setCategory2( request.getCategory2() );
         product.setCategory3( request.getCategory3() );
         product.setCollection( request.getCollection() );
+        product.setDescription( request.getDescription() );
         product.setStatus( request.getStatus() );
-        List<ProductColor> list = request.getProductColors();
-        if ( list != null ) {
-            product.setProductColors( new ArrayList<ProductColor>( list ) );
-        }
+        product.setProductColors( productColorRequestListToProductColorList( request.getProductColors() ) );
+        product.setIsColorsOptional( request.getIsColorsOptional() );
         product.setStocks( stockRequestListToStockList( request.getStocks() ) );
         product.setSizes( sizeRequestListToSizeList( request.getSizes() ) );
-        product.setInfos( request.getInfos() );
+        product.setIsSizesOptional( request.getIsSizesOptional() );
+        product.setFeatures( request.getFeatures() );
         product.setTags( request.getTags() );
 
         return product;
@@ -79,13 +81,13 @@ public class ProductMapperImpl implements ProductMapper {
         productResponse.setCategory3( entity.getCategory3() );
         productResponse.setCollection( entity.getCollection() );
         productResponse.setStatus( entity.getStatus() );
-        List<ProductColor> list = entity.getProductColors();
-        if ( list != null ) {
-            productResponse.setProductColors( new ArrayList<ProductColor>( list ) );
-        }
+        productResponse.setProductColors( productColorListToProductColorResponseList( entity.getProductColors() ) );
         productResponse.setSizes( sizeListToSizeResponseList( entity.getSizes() ) );
         productResponse.setStocks( stockListToStockResponseList( entity.getStocks() ) );
-        productResponse.setInfos( entity.getInfos() );
+        productResponse.setIsColorsOptional( entity.getIsColorsOptional() );
+        productResponse.setIsSizesOptional( entity.getIsSizesOptional() );
+        productResponse.setDescription( entity.getDescription() );
+        productResponse.setFeatures( entity.getFeatures() );
         productResponse.setTags( entity.getTags() );
 
         return productResponse;
@@ -148,6 +150,34 @@ public class ProductMapperImpl implements ProductMapper {
         return color;
     }
 
+    protected ProductColor productColorRequestToProductColor(ProductColorRequest productColorRequest) {
+        if ( productColorRequest == null ) {
+            return null;
+        }
+
+        ProductColor productColor = new ProductColor();
+
+        productColor.setId( productColorRequest.getId() );
+        productColor.setColor( colorRequestToColor( productColorRequest.getColor() ) );
+        productColor.setStatus( productColorRequest.getStatus() );
+        productColor.setImgUrl( productColorRequest.getImgUrl() );
+
+        return productColor;
+    }
+
+    protected List<ProductColor> productColorRequestListToProductColorList(List<ProductColorRequest> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<ProductColor> list1 = new ArrayList<ProductColor>( list.size() );
+        for ( ProductColorRequest productColorRequest : list ) {
+            list1.add( productColorRequestToProductColor( productColorRequest ) );
+        }
+
+        return list1;
+    }
+
     protected Stock stockRequestToStock(StockRequest stockRequest) {
         if ( stockRequest == null ) {
             return null;
@@ -183,7 +213,7 @@ public class ProductMapperImpl implements ProductMapper {
         Size size = new Size();
 
         size.setId( sizeRequest.getId() );
-        size.setSize( sizeRequest.getSize() );
+        size.setName( sizeRequest.getName() );
 
         return size;
     }
@@ -216,6 +246,48 @@ public class ProductMapperImpl implements ProductMapper {
         return brandResponse;
     }
 
+    protected ColorResponse colorToColorResponse(Color color) {
+        if ( color == null ) {
+            return null;
+        }
+
+        ColorResponse colorResponse = new ColorResponse();
+
+        colorResponse.setId( color.getId() );
+        colorResponse.setName( color.getName() );
+        colorResponse.setImgUrl( color.getImgUrl() );
+
+        return colorResponse;
+    }
+
+    protected ProductColorResponse productColorToProductColorResponse(ProductColor productColor) {
+        if ( productColor == null ) {
+            return null;
+        }
+
+        ProductColorResponse productColorResponse = new ProductColorResponse();
+
+        productColorResponse.setId( productColor.getId() );
+        productColorResponse.setColor( colorToColorResponse( productColor.getColor() ) );
+        productColorResponse.setImgUrl( productColor.getImgUrl() );
+        productColorResponse.setStatus( productColor.getStatus() );
+
+        return productColorResponse;
+    }
+
+    protected List<ProductColorResponse> productColorListToProductColorResponseList(List<ProductColor> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<ProductColorResponse> list1 = new ArrayList<ProductColorResponse>( list.size() );
+        for ( ProductColor productColor : list ) {
+            list1.add( productColorToProductColorResponse( productColor ) );
+        }
+
+        return list1;
+    }
+
     protected SizeResponse sizeToSizeResponse(Size size) {
         if ( size == null ) {
             return null;
@@ -224,7 +296,7 @@ public class ProductMapperImpl implements ProductMapper {
         SizeResponse sizeResponse = new SizeResponse();
 
         sizeResponse.setId( size.getId() );
-        sizeResponse.setSize( size.getSize() );
+        sizeResponse.setName( size.getName() );
 
         return sizeResponse;
     }
@@ -240,20 +312,6 @@ public class ProductMapperImpl implements ProductMapper {
         }
 
         return list1;
-    }
-
-    protected ColorResponse colorToColorResponse(Color color) {
-        if ( color == null ) {
-            return null;
-        }
-
-        ColorResponse colorResponse = new ColorResponse();
-
-        colorResponse.setId( color.getId() );
-        colorResponse.setName( color.getName() );
-        colorResponse.setImgUrl( color.getImgUrl() );
-
-        return colorResponse;
     }
 
     protected StockResponse stockToStockResponse(Stock stock) {

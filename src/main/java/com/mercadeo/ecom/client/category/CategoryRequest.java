@@ -1,10 +1,9 @@
 package com.mercadeo.ecom.client.category;
 
 import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
+import com.mercadeo.ecom.common.enums.Status;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import javax.persistence.Column;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -18,4 +17,6 @@ public class CategoryRequest extends BaseRequest {
 	private String name;
 	private Integer level;
 	private String imgUrl;
+	private Status status = Status.ACTIVE;
+	private CategoryRequest parent;
 }

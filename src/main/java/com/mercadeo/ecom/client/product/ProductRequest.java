@@ -2,6 +2,7 @@ package com.mercadeo.ecom.client.product;
 
 import com.mercadeo.ecom.category.db.entity.Category;
 import com.mercadeo.ecom.client.brand.BrandRequest;
+import com.mercadeo.ecom.client.productcolor.ProductColorRequest;
 import com.mercadeo.ecom.client.productsize.SizeRequest;
 import com.mercadeo.ecom.client.stock.StockRequest;
 import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
@@ -32,9 +33,12 @@ public class ProductRequest extends BaseRequest {
 	private Category category3;
 	private String collection;
 	private Status status;
-	private List<ProductColor> productColors;
+	private List<ProductColorRequest> productColors;
 	private List<SizeRequest> sizes;
 	private List<StockRequest> stocks;
-	private String infos;
+	private Boolean isColorsOptional;
+	private Boolean isSizesOptional;
+	private String description;
+	private String features;
 	private String tags;
 }

@@ -16,28 +16,28 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductService extends AbstractBaseService<ProductRequest, Product, ProductResponse, ProductMapper> {
-    private ProductRepository repository;
-    private ProductMapper mapper;
-    private ProductUpdateMapper updateMapper;
+	private ProductRepository repository;
+	private ProductMapper mapper;
+	private ProductUpdateMapper updateMapper;
 
-    public ProductService(ProductRepository repository, ProductMapper mapper, ProductUpdateMapper updateMapper) {
-        this.repository = repository;
-        this.mapper = mapper;
-        this.updateMapper = updateMapper;
-    }
+	public ProductService(ProductRepository repository, ProductMapper mapper, ProductUpdateMapper updateMapper) {
+		this.repository = repository;
+		this.mapper = mapper;
+		this.updateMapper = updateMapper;
+	}
 
-    @Override
-    public ProductRepository getRepository() {
-        return repository;
-    }
+	@Override
+	public ProductRepository getRepository() {
+		return repository;
+	}
 
-    @Override
-    public ProductMapper getMapper() {
-        return mapper;
-    }
+	@Override
+	public ProductMapper getMapper() {
+		return mapper;
+	}
 
-    @Override
-    public ProductUpdateMapper getUpdateMapper() {
-        return updateMapper;
-    }
+	@Override
+	public ProductUpdateMapper getUpdateMapper() {
+		return updateMapper;
+	}
 }

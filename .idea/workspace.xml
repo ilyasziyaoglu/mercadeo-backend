@@ -2,340 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ef924d8-63b5-4112-925f-37ae5111f955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/brand/controller/BrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/brand/db/entity/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/brand/db/repository/BrandRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/brand/mapper/BrandMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/brand/mapper/BrandUpdateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/db/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/db/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/mapper/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/mapper/CategoryUpdateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category/CategoryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category/CategoryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/color/ColorRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/color/ColorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productcolor/ProductColorRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productcolor/ProductColorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productsize/SizeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productsize/SizeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/stock/StockRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/stock/StockResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/user/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/color/db/repository/ColorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/color/mapper/ColorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/color/service/ColorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/db/repository/PropertyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/mapper/PropetyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/order/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/controller/ProductColorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/db/entity/ProductColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/db/repository/ProductColorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/mapper/ProductColorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/mapper/ProductColorUpdateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/service/ProductColorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/controller/ProductSizeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/db/entity/Size.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/db/repository/SizeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/mapper/SizeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/mapper/SizeUpdateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/service/SizeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/stock/controller/StockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/stock/db/entity/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/stock/db/repository/StockRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/stock/mapper/StockMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/stock/mapper/StockUpdateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/stock/service/StockService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/user/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productfilter/ProductFilterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productfilter/ProductFilterResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter/controller/ProductFilterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter/db/entity/ProductFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter/db/query/ProductFilterQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter/db/repository/ProductFilterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter/mapper/ProductFilterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter/service/ProductFilterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ecom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/EcomApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/EcomApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/controller/AccessoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/db/entity/Accessory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/db/repository/AccessoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/enums/MainCategory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/enums/SubCategories.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/mapper/AccessoryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/mapper/AccessoryUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/accessory/service/AccessoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/accessory/AccessoryRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/accessory/AccessoryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/jewelry/JewelryRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/jewelry/JewelryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/limitededition/LimitedEditionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/limitededition/LimitedEditionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/model/ModelRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/model/ModelResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/modelaccessory/ModelAccessoryRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/modelaccessory/ModelAccessoryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/order/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/order/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/order/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/order/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/order/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/order/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/product/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product/ProductRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/product/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product/ProductResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/productmodel/ColorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/productmodel/ProductModelRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/brand/BrandRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/productmodel/ProductModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/brand/BrandResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/productoption/ProductOptionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/productoption/ProductOptionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/productoption/ProductSize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/user/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/user/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/client/user/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/user/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/auth/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/auth/request/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/auth/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/auth/request/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/auth/response/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/auth/response/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/controller/AbstractBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/controller/AbstractBaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/db/entity/AbstractBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/db/entity/AbstractBaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/db/query/AbstractSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/db/query/AbstractSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/db/query/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/db/query/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/db/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/db/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/mapper/BaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/mapper/BaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/mapper/BaseUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/mapper/BaseUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/request/BaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/request/BaseRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/request/pager/DtColumnDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/DtColumnDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/request/pager/DtOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/DtOrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/request/pager/DtSearchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/DtSearchDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/request/pager/PageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/PageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/request/pager/PageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/PageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/response/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/response/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/service/AbstractBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/service/AbstractBaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/service/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/basemodel/service/ServiceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/basemodel/service/ServiceResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/configs/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/configs/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/configs/swagger/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/configs/swagger/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/configs/web/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/configs/web/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/enums/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/controller/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/controller/PropertyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/db/entity/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/db/entity/Property.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/db/repository/PropertyRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/mapper/PropertyUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/mapper/PropertyUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/mapper/PropetyMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/request/PropertyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/request/PropertyRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/response/PropertyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/response/PropertyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/property/service/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/property/service/PropertyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/common/webfilters/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/common/webfilters/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/controller/JewelryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/db/entity/Jewelry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/db/query/JewelryQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/db/repository/JewelryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/mapper/JewelryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/mapper/JewelryUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/jewelry/service/JewelryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/controller/LimitedEditionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/db/entity/LimitedEdition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/db/query/LimitedEditionQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/db/repository/LimitedEditionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/mapper/LimitedEditionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/mapper/LimitedEditionUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/limitededition/service/LimitedEditionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/model/controller/ModelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/model/db/entity/Model.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/model/db/repository/ModelRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/model/mapper/BagModelMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/model/mapper/ModelUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/model/service/ModelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/modelaccessory/controller/ModelAccessoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/modelaccessory/db/entity/ModelAccessory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/modelaccessory/db/repository/ModelAccessoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/modelaccessory/mapper/ModelAccessoryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/modelaccessory/mapper/ModelAccessoryUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/modelaccessory/service/ModelAccessoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/order/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/order/db/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/order/db/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/order/db/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/order/db/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/order/mapper/OrderMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/order/mapper/OrderUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/order/mapper/OrderUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/product/db/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/db/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/product/db/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/db/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/product/mapper/ProductMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/product/mapper/ProductUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/mapper/ProductUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/controller/ProductModelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/color/controller/ColorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/db/entity/Color.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/db/entity/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/color/db/entity/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/db/repository/ColorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/db/repository/ProductModelRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/mapper/ColorMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/mapper/ProductModelMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/mapper/ProductModelUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/color/mapper/ColorUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productmodel/service/ProductModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/brand/service/BrandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productoption/controller/ProductOptionsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productoption/db/entity/ProductOption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productoption/db/repository/ProductOptionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productoption/mapper/ProductOptionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productoption/mapper/ProductOptionUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/productoption/service/ProductOptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/user/db/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/user/db/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/user/db/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/user/db/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/user/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/user/mapper/UserUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/user/mapper/UserUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andriambavy/ecom/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/EcomApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/controller/AccessoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/db/entity/Accessory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/db/repository/AccessoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/enums/MainCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/enums/SubCategories.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/mapper/AccessoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/mapper/AccessoryMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/mapper/AccessoryUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/accessory/service/AccessoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/accessory/AccessoryRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/accessory/AccessoryResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/jewelry/JewelryRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/jewelry/JewelryResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/limitededition/LimitedEditionRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/limitededition/LimitedEditionResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/model/ModelRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/model/ModelResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/modelaccessory/ModelAccessoryRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/modelaccessory/ModelAccessoryResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/order/OrderRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/order/OrderResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/order/OrderStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/product/ProductRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/product/ProductResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/productmodel/ColorResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/productmodel/ProductModelRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/productmodel/ProductModelResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/productoption/ProductOptionRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/productoption/ProductOptionResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/productoption/ProductSize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/user/UserRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/client/user/UserResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/auth/controller/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/auth/request/LoginRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/auth/request/RegisterRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/auth/response/LoginResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/controller/AbstractBaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/db/entity/AbstractBaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/db/query/AbstractSpecification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/db/query/Specification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/db/repository/BaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/mapper/BaseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/mapper/BaseUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/request/BaseRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/request/pager/DtColumnDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/request/pager/DtOrderDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/request/pager/DtSearchDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/request/pager/PageDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/request/pager/PageResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/response/BaseResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/service/AbstractBaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/service/BaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/basemodel/service/ServiceResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/configs/security/SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/configs/swagger/SwaggerConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/configs/web/WebConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/configs/web/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/enums/Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/controller/PropertyController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/db/entity/Property.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/db/repository/PropertyRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/mapper/PropertyUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/mapper/PropetyMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/mapper/PropetyMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/request/PropertyRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/response/PropertyResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/property/service/PropertyService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/utils/JwtUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/common/webfilters/JwtRequestFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/controller/JewelryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/db/entity/Jewelry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/db/query/JewelryQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/db/repository/JewelryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/mapper/JewelryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/mapper/JewelryMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/mapper/JewelryUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/jewelry/service/JewelryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/controller/LimitedEditionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/db/entity/LimitedEdition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/db/query/LimitedEditionQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/db/repository/LimitedEditionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/mapper/LimitedEditionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/mapper/LimitedEditionMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/mapper/LimitedEditionUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/limitededition/service/LimitedEditionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/controller/ModelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/db/entity/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/db/repository/ModelRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/mapper/BagModelMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/mapper/BagModelMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/mapper/ModelUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/model/service/ModelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/controller/ModelAccessoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/db/entity/ModelAccessory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/db/repository/ModelAccessoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/mapper/ModelAccessoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/mapper/ModelAccessoryMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/mapper/ModelAccessoryUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/modelaccessory/service/ModelAccessoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/db/entity/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/db/repository/OrderRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/mapper/OrderMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/mapper/OrderMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/mapper/OrderUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/order/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/db/entity/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/db/repository/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/mapper/ProductMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/mapper/ProductMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/mapper/ProductUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/product/service/ProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/controller/ProductModelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/db/entity/Color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/db/entity/ProductModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/db/repository/ColorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/db/repository/ProductModelRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/mapper/ColorMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/mapper/ColorMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/mapper/ProductModelMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/mapper/ProductModelMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/mapper/ProductModelUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productmodel/service/ProductModelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/controller/ProductOptionsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/db/entity/ProductOption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/db/repository/ProductOptionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/mapper/ProductOptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/mapper/ProductOptionMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/mapper/ProductOptionUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/productoption/service/ProductOptionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/db/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/db/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/mapper/UserMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/mapper/UserUpdateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/andriambavy/ecom/user/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/db/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/category/db/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category/CategoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category/CategoryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category/CategoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category/CategoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product/ProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productcolor/ProductColorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productcolor/ProductColorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productcolor/ProductColorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productcolor/ProductColorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productsize/SizeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productsize/SizeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productsize/SizeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/productsize/SizeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/db/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/db/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/db/entity/ProductColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productcolor/db/entity/ProductColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/controller/ProductSizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/controller/SizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/db/entity/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/sizes/db/entity/Size.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ecom-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ecom-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ecom-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/ecom-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/accessory/mapper/AccessoryMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/common/property/mapper/PropetyMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/common/property/mapper/PropetyMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/jewelry/mapper/JewelryMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/limitededition/mapper/LimitedEditionMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/model/mapper/BagModelMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/modelaccessory/mapper/ModelAccessoryMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/order/mapper/OrderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/order/mapper/OrderMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/product/mapper/ProductMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/product/mapper/ProductMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/productmodel/mapper/ColorMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/productmodel/mapper/ProductModelMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/productoption/mapper/ProductOptionMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/andriambavy/ecom/user/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/user/mapper/UserMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/common/property/mapper/PropetyMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/common/property/mapper/PropetyMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/order/mapper/OrderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/order/mapper/OrderMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/product/mapper/ProductMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/product/mapper/ProductMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/user/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/mercadeo/ecom/user/mapper/UserMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -395,6 +92,15 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mercadeo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mercadeo: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -406,6 +112,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ilyas Ziyaoglu &lt;ilyasziyaoglu@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cKI1YJ5q92mURIKMbwYtseKnTL" />
@@ -425,17 +136,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/stock" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mercadeo.ecom.productfilter.product.db.query" />
+      <recent name="com.mercadeo.ecom.client.product" />
+      <recent name="com.mercadeo.ecom.product.db.query" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/productfilter" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/product" />
       <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/stock" />
       <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom" />
       <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/category" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client/" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/mercadeo/ecom/client" />
     </key>
   </component>
   <component name="RunManager">
@@ -446,6 +162,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.21966396" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mercadeo@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mercadeo@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@56b24498" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:mercadeo@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@60cf6982" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -458,101 +202,145 @@
       <option name="presentableId" value="Default" />
       <updated>1590270643754</updated>
       <workItem from="1590270648200" duration="58000" />
-      <workItem from="1590309789110" duration="18891000" />
+      <workItem from="1590309789110" duration="38752000" />
+      <workItem from="1590492140026" duration="557000" />
+      <workItem from="1590492711764" duration="11502000" />
     </task>
+    <task id="LOCAL-00001" summary="modeller olusturuldu">
+      <created>1590334751429</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590334751429</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modeller olusturuldu" />
+    <option name="LAST_COMMIT_MESSAGE" value="modeller olusturuldu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590312924963">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590312924963" />
-    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1590312077069">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1590492558987">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1590312077069" />
-    <state x="309" y="457" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590325824799">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1590492558987" />
+    <state x="309" y="457" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590491343354">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="309" y="457" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590325824799" />
+    <state x="309" y="457" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590491343354" />
     <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590325794771">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590325794771" />
-    <state width="1636" height="421" key="GridCell.Tab.0.bottom" timestamp="1590334642850">
+    <state x="603" y="235" key="#xdebugger.evaluate" timestamp="1590450989115">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642850" />
-    <state width="1636" height="354" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1590310638957" />
-    <state width="1636" height="421" key="GridCell.Tab.0.center" timestamp="1590334642848">
+    <state x="603" y="235" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1590450989115" />
+    <state x="185" y="127" key="CommitChangelistDialog2" timestamp="1590334746942">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642848" />
-    <state width="1636" height="354" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1590310638956" />
-    <state width="1636" height="421" key="GridCell.Tab.0.left" timestamp="1590334642848">
+    <state x="185" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1590334746942" />
+    <state width="471" height="466" key="DebuggerActiveHint" timestamp="1590484229767">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642848" />
-    <state width="1636" height="354" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1590310638955" />
-    <state width="1636" height="421" key="GridCell.Tab.0.right" timestamp="1590334642849">
+    <state width="471" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1590484229767" />
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1590504585809">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590405239893" />
+    <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1590504585809" />
+    <state width="1636" height="310" key="GridCell.Tab.0.bottom" timestamp="1590534393222">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642849" />
-    <state width="1636" height="354" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1590310638956" />
-    <state width="1636" height="421" key="GridCell.Tab.1.bottom" timestamp="1590334642851">
+    <state width="1636" height="310" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393222" />
+    <state width="1636" height="287" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1590450760005" />
+    <state width="1636" height="310" key="GridCell.Tab.0.center" timestamp="1590534393221">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642851" />
-    <state width="1636" height="421" key="GridCell.Tab.1.center" timestamp="1590334642850">
+    <state width="1636" height="310" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393221" />
+    <state width="1636" height="287" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1590450760003" />
+    <state width="1636" height="310" key="GridCell.Tab.0.left" timestamp="1590534393220">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642850" />
-    <state width="1636" height="421" key="GridCell.Tab.1.left" timestamp="1590334642850">
+    <state width="1636" height="310" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393220" />
+    <state width="1636" height="287" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1590450760002" />
+    <state width="1636" height="310" key="GridCell.Tab.0.right" timestamp="1590534393221">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642850" />
-    <state width="1636" height="421" key="GridCell.Tab.1.right" timestamp="1590334642851">
+    <state width="1636" height="310" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393221" />
+    <state width="1636" height="287" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1590450760004" />
+    <state width="1636" height="310" key="GridCell.Tab.1.bottom" timestamp="1590534393224">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642851" />
-    <state width="1636" height="421" key="GridCell.Tab.2.bottom" timestamp="1590334642853">
+    <state width="1636" height="310" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393224" />
+    <state width="1636" height="353" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1590484172650" />
+    <state width="1636" height="310" key="GridCell.Tab.1.center" timestamp="1590534393223">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642853" />
-    <state width="1636" height="421" key="GridCell.Tab.2.center" timestamp="1590334642852">
+    <state width="1636" height="310" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393223" />
+    <state width="1636" height="353" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1590484172649" />
+    <state width="1636" height="310" key="GridCell.Tab.1.left" timestamp="1590534393222">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642852" />
-    <state width="1636" height="421" key="GridCell.Tab.2.left" timestamp="1590334642851">
+    <state width="1636" height="310" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393222" />
+    <state width="1636" height="353" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1590484172648" />
+    <state width="1636" height="310" key="GridCell.Tab.1.right" timestamp="1590534393223">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642851" />
-    <state width="1636" height="421" key="GridCell.Tab.2.right" timestamp="1590334642852">
+    <state width="1636" height="310" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393223" />
+    <state width="1636" height="353" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1590484172649" />
+    <state width="1636" height="310" key="GridCell.Tab.2.bottom" timestamp="1590534393226">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="421" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590334642852" />
-    <state x="706" y="355" width="342" height="340" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1590331821630">
+    <state width="1636" height="310" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393226" />
+    <state width="1636" height="421" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1590447640270" />
+    <state width="1636" height="310" key="GridCell.Tab.2.center" timestamp="1590534393225">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="706" y="355" width="342" height="340" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1680.1050@0.0.1680.1050" timestamp="1590331821630" />
+    <state width="1636" height="310" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393225" />
+    <state width="1636" height="421" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1590447640269" />
+    <state width="1636" height="310" key="GridCell.Tab.2.left" timestamp="1590534393224">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1636" height="310" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393224" />
+    <state width="1636" height="421" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1590447640269" />
+    <state width="1636" height="310" key="GridCell.Tab.2.right" timestamp="1590534393225">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1636" height="310" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590534393225" />
+    <state width="1636" height="421" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1590447640270" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1590334753516">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1590334753516" />
+    <state x="706" y="355" width="342" height="340" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1590499691051">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="706" y="355" width="342" height="340" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1680.1050@0.0.1680.1050" timestamp="1590499691051" />
     <state x="569" y="215" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1590324907856">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="569" y="215" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590324907856" />
-    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590277231597">
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590405239894">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590277231597" />
-    <state x="432" y="250" width="816" height="550" key="find.popup" timestamp="1590330063461">
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590405239894" />
+    <state x="432" y="250" width="816" height="550" key="find.popup" timestamp="1590515287143">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="432" y="250" width="816" height="550" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590330063461" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590324613344">
+    <state x="432" y="250" width="816" height="550" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590515287143" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1590514657022">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590324613344" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1590514657022" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1590343941132" />
   </component>
 </project>

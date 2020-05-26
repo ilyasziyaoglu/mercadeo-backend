@@ -1,11 +1,16 @@
 package com.mercadeo.ecom.category.db.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.mercadeo.ecom.common.basemodel.db.entity.AbstractBaseEntity;
+import com.mercadeo.ecom.common.enums.Status;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -35,6 +40,24 @@ public class Category extends AbstractBaseEntity {
 
 	@Column(name = "image")
 	private String imgUrl;
+
+	@Column(name = "status")
+	private Status status = Status.ACTIVE;
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "parent_id")
+	private Category parent;
+
+//	@JsonManagedReference
+//	@ManyToOne(mappedBy="parent", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval=true)
+//	private Set<Category> children = new HashSet<>();
+
+	public Long getParentId(){
+		if(getParent() != null)
+			return getParent().getId();
+		return null;
+	}
 
 	@Override
 	public Long getId() {

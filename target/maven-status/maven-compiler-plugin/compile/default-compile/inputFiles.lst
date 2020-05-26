@@ -6,6 +6,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/productsize/SizeResponse.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/sizes/db/entity/Size.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/user/UserRequest.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productfilter/controller/ProductFilterController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/DtColumnDto.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/order/mapper/OrderUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/auth/controller/AuthController.java
@@ -29,6 +30,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/order/db/repository/OrderRepository.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/brand/BrandResponse.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/configs/security/SecurityConfiguration.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productfilter/db/query/ProductFilterQuery.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/DtOrderDto.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/category/CategoryRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/service/ServiceResult.java
@@ -38,6 +40,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/mapper/ProductUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/productsize/SizeRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/property/mapper/PropetyMapper.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/productfilter/ProductFilterRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/mapper/BaseUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/stock/StockResponse.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/brand/db/repository/BrandRepository.java
@@ -64,11 +67,13 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/order/service/OrderService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/controller/ProductColorController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/mapper/ProductColorMapper.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productfilter/service/ProductFilterService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/utils/JwtUtil.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/mapper/ProductColorUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/PageDto.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/auth/request/LoginRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/mapper/BaseMapper.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productfilter/db/repository/ProductFilterRepository.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/sizes/mapper/SizeUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/user/Gender.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/db/repository/ProductColorRepository.java
@@ -76,7 +81,10 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/service/BaseService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/db/repository/BaseRepository.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/product/ProductResponse.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/productfilter/ProductFilterResponse.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productfilter/mapper/ProductFilterMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/brand/db/entity/Brand.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productfilter/db/entity/ProductFilter.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/property/mapper/PropertyUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/BaseRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/db/entity/ProductColor.java
@@ -87,7 +95,6 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/stock/mapper/StockUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/db/entity/AbstractBaseEntity.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/category/db/repository/CategoryRepository.java
-/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/sizes/controller/ProductSizeController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/service/ProductColorService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/order/OrderRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/sizes/mapper/SizeMapper.java
@@ -99,6 +106,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/brand/controller/BrandController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/stock/db/entity/Stock.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/category/mapper/CategoryMapper.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/sizes/controller/SizeController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/stock/controller/StockController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/stock/StockRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/configs/web/WebConfig.java

@@ -13,5 +13,5 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class SizeResponse extends BaseResponse {
 
-	private String size;
+	private String name;
 }

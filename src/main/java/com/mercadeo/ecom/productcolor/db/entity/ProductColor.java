@@ -3,6 +3,7 @@ package com.mercadeo.ecom.productcolor.db.entity;
 
 import com.mercadeo.ecom.color.db.entity.Color;
 import com.mercadeo.ecom.common.basemodel.db.entity.AbstractBaseEntity;
+import com.mercadeo.ecom.common.enums.Status;
 import com.mercadeo.ecom.product.db.entity.Product;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -30,15 +31,14 @@ public class ProductColor extends AbstractBaseEntity {
 	private Long id;
 
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name = "product_id", referencedColumnName = "id")
-	private Product product;
-
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "color_id", referencedColumnName = "id")
 	private Color color;
 
-	@Column(name = "img_urls", length = 5000)
-	private String imgUrls;
+	@Column(name = "status")
+	private Status status;
+
+	@Column(name = "img_url", length = 1000)
+	private String imgUrl;
 
 	@Override
 	public Long getId() {

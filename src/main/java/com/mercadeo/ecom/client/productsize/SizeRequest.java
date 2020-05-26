@@ -13,5 +13,5 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class SizeRequest extends BaseRequest {
 
-	private String size;
+	private String name;
 }

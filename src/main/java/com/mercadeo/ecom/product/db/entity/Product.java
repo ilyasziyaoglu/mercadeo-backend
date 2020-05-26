@@ -70,11 +70,18 @@ public class Product extends AbstractBaseEntity {
 	@Column(name = "collection")
 	private String collection;
 
+	@Column(name = "description", length = 2000)
+	private String description;
+
 	@Column(name = "status")
 	private Status status;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "product_id")
 	private List<ProductColor> productColors;
+
+	@Column(name = "is_colors_optional")
+	private Boolean isColorsOptional = false;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "product_id")
@@ -86,12 +93,14 @@ public class Product extends AbstractBaseEntity {
 			   inverseJoinColumns = @JoinColumn(name = "size_id"))
 	private List<Size> sizes;
 
+	@Column(name = "is_sizes_optional")
+	private Boolean isSizesOptional = false;
+
 	/**
 	 * comma separated
 	 */
-	@Column(name = "infos",
-			length = 2000)
-	private String infos;
+	@Column(name = "features", length = 500)
+	private String features;
 
 	/**
 	 * comma separated
