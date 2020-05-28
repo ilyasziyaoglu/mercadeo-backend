@@ -30,13 +30,9 @@ public class Product extends AbstractBaseEntity {
 	private static final long serialVersionUID = -6997084654327883455L;
 
 	@Id
-	@Column(name = "id",
-			nullable = false)
-	@SequenceGenerator(name = "product_id_gen",
-					   sequenceName = "product_id_seq",
-					   allocationSize = 1)
-	@GeneratedValue(generator = "product_id_gen",
-					strategy = GenerationType.SEQUENCE)
+	@Column(name = "id", nullable = false)
+	@SequenceGenerator(name = "product_id_gen", sequenceName = "product_id_seq", allocationSize = 1)
+	@GeneratedValue(generator = "product_id_gen", strategy = GenerationType.SEQUENCE)
 	private Long id;
 
 	@Column(name = "code")

@@ -1,0 +1,125 @@
+type Product {
+	code: String,
+	name: String,
+	brand: Brand,
+	imgUrl: String,
+	price: Int,
+	category1: Category,
+	category2: Category,
+	category3: Category,
+	collection: String,
+	status: Status,
+	productColors: [ProductColor],
+	sizes: [Size],
+	stocks: [Stock],
+	isColorsOptional: Boolean,
+	isSizesOptional: Boolean,
+	description: String,
+	features: String,
+	tags: String
+}
+
+input ProductRequest {
+	code: String,
+	name: String,
+	brand: BrandRequest,
+	imgUrl: String,
+	price: Int,
+	category1: CategoryRequest,
+	category2: CategoryRequest,
+	category3: CategoryRequest,
+	collection: String,
+	status: Status,
+	productColors: [ProductColorRequest],
+	sizes: [SizeRequest],
+	stocks: [StockRequest],
+	isColorsOptional: Boolean,
+	isSizesOptional: Boolean,
+	description: String,
+	features: String,
+	tags: String
+}
+
+enum Status {
+    ACTIVE,DEACTIVE
+}
+
+type Brand {
+	name: String,
+	logoImgUrl: String,
+	status: Status
+}
+
+input BrandRequest {
+	name: String,
+	logoImgUrl: String,
+	status: Status
+}
+
+type Category {
+	name: String,
+	level: Int,
+	imgUrl: String,
+	status: Status,
+	parent: Category
+}
+
+input CategoryRequest {
+	name: String,
+	level: Int,
+	imgUrl: String,
+	status: Status,
+	parent: CategoryRequest
+}
+
+type Size {
+	name: String
+}
+
+input SizeRequest {
+	name: String
+}
+
+type Stock {
+	color: Color,
+	size: Size,
+	stock: Int
+}
+
+input StockRequest {
+	color: ColorRequest,
+	size: SizeRequest,
+	stock: Int
+}
+
+type Color {
+	name: String,
+	imgUrl: String
+}
+
+input ColorRequest {
+	name: String,
+	imgUrl: String
+}
+
+type ProductColor {
+	color: Color,
+	imgUrl: String,
+	status: Status
+}
+
+input ProductColorRequest {
+	color: ColorRequest,
+	imgUrl: String,
+	status: Status
+}
+
+type Query {
+	getProducts(name: String): [Product]
+	getById(id: ID): Product
+}
+
+type Mutation {
+	createProduct(request: ProductRequest): Product
+}
+

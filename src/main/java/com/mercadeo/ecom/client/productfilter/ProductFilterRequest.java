@@ -1,16 +1,12 @@
 package com.mercadeo.ecom.client.productfilter;
 
-import com.mercadeo.ecom.category.db.entity.Category;
-import com.mercadeo.ecom.client.brand.BrandRequest;
-import com.mercadeo.ecom.client.color.ColorRequest;
-import com.mercadeo.ecom.client.productsize.SizeRequest;
-import com.mercadeo.ecom.client.stock.StockRequest;
 import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -21,14 +17,16 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 public class ProductFilterRequest extends BaseRequest {
 
-	private List<BrandRequest> brands;
+	private Set<Long> brandIds = new HashSet<>();
+	private Set<Long> ids = new HashSet<>();
+	private boolean checkIds = false;
 	private BigDecimal minPrice;
 	private BigDecimal maxPrice;
-	private Category category1;
-	private Category category2;
-	private Category category3;
+	private Long category1;
+	private Long category2;
+	private Long category3;
 	private String collection;
-	private List<ColorRequest> colors;
-	private List<SizeRequest> sizes;
+	private Set<Long> colorIds = new HashSet<>();
+	private Set<Long> sizeIds = new HashSet<>();
 	private String tags;
 }

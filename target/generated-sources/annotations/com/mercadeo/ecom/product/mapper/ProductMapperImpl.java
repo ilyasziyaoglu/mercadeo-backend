@@ -9,6 +9,7 @@ import com.mercadeo.ecom.client.product.ProductRequest;
 import com.mercadeo.ecom.client.product.ProductResponse;
 import com.mercadeo.ecom.client.productcolor.ProductColorRequest;
 import com.mercadeo.ecom.client.productcolor.ProductColorResponse;
+import com.mercadeo.ecom.client.productfilter.ProductFilterResponse;
 import com.mercadeo.ecom.client.productsize.SizeRequest;
 import com.mercadeo.ecom.client.productsize.SizeResponse;
 import com.mercadeo.ecom.client.stock.StockRequest;
@@ -25,7 +26,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-05-26T21:43:13+0300",
+    date = "2020-05-28T01:08:06+0300",
     comments = "version: 1.3.0.Beta2, compiler: javac, environment: Java 1.8.0_241 (Oracle Corporation)"
 )
 @Component
@@ -116,6 +117,20 @@ public class ProductMapperImpl implements ProductMapper {
         List<ProductResponse> list = new ArrayList<ProductResponse>( requestList.size() );
         for ( Product product : requestList ) {
             list.add( toResponse( product ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<ProductFilterResponse> toFilterResponse(List<Product> products) {
+        if ( products == null ) {
+            return null;
+        }
+
+        List<ProductFilterResponse> list = new ArrayList<ProductFilterResponse>( products.size() );
+        for ( Product product : products ) {
+            list.add( productToProductFilterResponse( product ) );
         }
 
         return list;
@@ -339,5 +354,23 @@ public class ProductMapperImpl implements ProductMapper {
         }
 
         return list1;
+    }
+
+    protected ProductFilterResponse productToProductFilterResponse(Product product) {
+        if ( product == null ) {
+            return null;
+        }
+
+        ProductFilterResponse productFilterResponse = new ProductFilterResponse();
+
+        productFilterResponse.setId( product.getId() );
+        productFilterResponse.setName( product.getName() );
+        productFilterResponse.setImgUrl( product.getImgUrl() );
+        productFilterResponse.setPrice( product.getPrice() );
+        productFilterResponse.setCollection( product.getCollection() );
+        productFilterResponse.setFeatures( product.getFeatures() );
+        productFilterResponse.setTags( product.getTags() );
+
+        return productFilterResponse;
     }
 }
