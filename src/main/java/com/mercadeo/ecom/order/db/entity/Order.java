@@ -3,12 +3,14 @@ package com.mercadeo.ecom.order.db.entity;
 
 import com.mercadeo.ecom.client.order.OrderStatus;
 import com.mercadeo.ecom.common.basemodel.db.entity.AbstractBaseEntity;
+import com.mercadeo.ecom.orderproducts.db.entity.OrderProduct;
 import com.mercadeo.ecom.user.db.entity.User;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -29,8 +31,8 @@ public class Order extends AbstractBaseEntity {
 	@GeneratedValue(generator = "order_id_gen", strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id")
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
 
 	@Column(name = "buyer_note", length = 1000)
@@ -47,6 +49,22 @@ public class Order extends AbstractBaseEntity {
 
 	@Column(name = "reason", length = 1024)
 	private String reason;
+
+	@Column(name = "receiver_name")
+	private String receiverName;
+
+	@Column(name = "receiver_phone")
+	private String receiverPhone;
+
+	@Column(name = "receiver_email")
+	private String receiverEmail;
+
+	@Column(name = "receiver_address", length = 1024)
+	private String receiverAddress;
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "order_id")
+	private Set<OrderProduct> orderProducts = new HashSet<>();
 
 	public Order() {
 	}

@@ -2,6 +2,7 @@ com/mercadeo/ecom/client/productsize/SizeRequest.class
 com/mercadeo/ecom/user/mapper/UserMapperImpl.class
 com/mercadeo/ecom/common/utils/JwtUtil.class
 com/mercadeo/ecom/client/productfilter/ProductFilterResponse.class
+com/mercadeo/ecom/orderproducts/mapper/OrderProductMapperImpl.class
 com/mercadeo/ecom/common/property/db/entity/Property.class
 com/mercadeo/ecom/common/basemodel/request/pager/DtColumnDto.class
 com/mercadeo/ecom/stock/mapper/StockUpdateMapper.class
@@ -21,7 +22,9 @@ com/mercadeo/ecom/category/controller/CategoryController.class
 com/mercadeo/ecom/EcomApplication.class
 com/mercadeo/ecom/common/configs/web/WebConfig$1.class
 com/mercadeo/ecom/brand/controller/BrandController.class
+com/mercadeo/ecom/orderproducts/mapper/OrderProductUpdateMapper.class
 com/mercadeo/ecom/client/order/OrderRequest.class
+com/mercadeo/ecom/orderproducts/service/OrderProductService.class
 com/mercadeo/ecom/product/db/query/ProductQuery.class
 com/mercadeo/ecom/user/db/repository/UserRepository.class
 com/mercadeo/ecom/stock/db/repository/StockRepository.class
@@ -61,6 +64,7 @@ com/mercadeo/ecom/order/mapper/OrderMapper.class
 com/mercadeo/ecom/common/auth/request/LoginRequest.class
 com/mercadeo/ecom/client/category/CategoryResponse.class
 com/mercadeo/ecom/common/property/controller/PropertyController.class
+com/mercadeo/ecom/orderproducts/mapper/OrderProductMapper.class
 com/mercadeo/ecom/user/db/entity/User.class
 com/mercadeo/ecom/product/mapper/ProductUpdateMapper.class
 com/mercadeo/ecom/productcolor/db/entity/ProductColor.class
@@ -86,6 +90,7 @@ com/mercadeo/ecom/sizes/service/SizeService.class
 com/mercadeo/ecom/category/db/entity/Category.class
 com/mercadeo/ecom/order/db/repository/OrderRepository.class
 com/mercadeo/ecom/category/mapper/CategoryUpdateMapper.class
+com/mercadeo/ecom/client/orderproduct/OrderProductResponse.class
 com/mercadeo/ecom/productcolor/service/ProductColorService.class
 com/mercadeo/ecom/productcolor/mapper/ProductColorMapperImpl.class
 com/mercadeo/ecom/common/basemodel/db/query/AbstractSpecification.class
@@ -97,6 +102,7 @@ com/mercadeo/ecom/common/basemodel/request/BaseRequest.class
 com/mercadeo/ecom/common/configs/swagger/SwaggerConfiguration.class
 com/mercadeo/ecom/brand/db/repository/BrandRepository.class
 com/mercadeo/ecom/common/configs/security/SecurityConfiguration.class
+com/mercadeo/ecom/orderproducts/db/repository/OrderProductRepository.class
 com/mercadeo/ecom/brand/mapper/BrandMapper.class
 com/mercadeo/ecom/common/property/mapper/PropetyMapperImpl.class
 com/mercadeo/ecom/brand/mapper/BrandUpdateMapper.class
@@ -113,6 +119,7 @@ com/mercadeo/ecom/client/productsize/SizeResponse.class
 com/mercadeo/ecom/common/basemodel/controller/AbstractBaseController.class
 com/mercadeo/ecom/color/db/repository/ColorRepository.class
 com/mercadeo/ecom/user/mapper/UserUpdateMapper.class
+com/mercadeo/ecom/orderproducts/controller/OrderProductController.class
 com/mercadeo/ecom/order/controller/OrderController.class
 com/mercadeo/ecom/category/mapper/CategoryMapperImpl.class
 com/mercadeo/ecom/client/color/ColorResponse.class
@@ -124,3 +131,5 @@ com/mercadeo/ecom/common/configs/web/WebConfig.class
 com/mercadeo/ecom/common/basemodel/mapper/BaseMapper.class
 com/mercadeo/ecom/common/basemodel/service/BaseService.class
 com/mercadeo/ecom/common/auth/request/RegisterRequest.class
+com/mercadeo/ecom/client/orderproduct/OrderProductRequest.class
+com/mercadeo/ecom/orderproducts/db/entity/OrderProduct.class

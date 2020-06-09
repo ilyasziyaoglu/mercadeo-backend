@@ -16,6 +16,7 @@ public class CategoryRequest extends BaseRequest {
 
 	private String name;
 	private Integer level;
+	private Integer order;
 	private String imgUrl;
 	private Status status = Status.ACTIVE;
 	private CategoryRequest parent;

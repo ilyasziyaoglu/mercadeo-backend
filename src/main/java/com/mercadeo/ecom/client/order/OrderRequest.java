@@ -1,9 +1,13 @@
 package com.mercadeo.ecom.client.order;
 
+import com.mercadeo.ecom.client.orderproduct.OrderProductRequest;
+import com.mercadeo.ecom.client.user.UserRequest;
 import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
-import com.mercadeo.ecom.user.db.entity.User;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -14,9 +18,14 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class OrderRequest extends BaseRequest {
 
-	private User user;
+	private UserRequest user;
 	private String buyerNote;
 	private OrderStatus status;
 	private String shippingInfo;
 	private String reason;
+	private String receiverName;
+	private String receiverPhone;
+	private String receiverEmail;
+	private String receiverAddress;
+	private Set<OrderProductRequest> orderProducts = new HashSet<>();
 }

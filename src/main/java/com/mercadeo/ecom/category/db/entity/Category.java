@@ -38,6 +38,9 @@ public class Category extends AbstractBaseEntity {
 	@Column(name = "level")
 	private Integer level;
 
+	@Column(name = "order")
+	private Integer order;
+
 	@Column(name = "image")
 	private String imgUrl;
 

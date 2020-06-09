@@ -9,13 +9,18 @@ import com.mercadeo.ecom.common.basemodel.request.pager.DtOrderDto;
 import com.mercadeo.ecom.common.basemodel.request.pager.PageDto;
 import com.mercadeo.ecom.common.basemodel.response.BaseResponse;
 import com.mercadeo.ecom.common.basemodel.mapper.BaseMapper;
+import com.mercadeo.ecom.common.utils.JwtUtil;
+import com.mercadeo.ecom.user.db.entity.User;
+import com.mercadeo.ecom.user.db.repository.UserRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.CollectionUtils;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Optional;
@@ -142,4 +147,16 @@ public abstract class AbstractBaseService<
 
 		return serviceResult;
 	}
+
+//	public User getUser(HttpServletRequest request) {
+//		final String authorizationHeader = request.getHeader("Authorization");
+//		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+//			String username = jwtUtil.extractUsername(authorizationHeader.substring(7));
+//			Optional<User> user = userRepository.findByUsername(username);
+//			if (user.isPresent()) {
+//				return user.get();
+//			}
+//		}
+//		return null;
+//	}
 }
