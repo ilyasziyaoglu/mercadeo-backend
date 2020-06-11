@@ -33,4 +33,9 @@ public class ColorController extends AbstractBaseController<ColorRequest, Color,
 	public ColorMapper getMapper() {
 		return mapper;
 	}
+
+	@GetMapping("/merhaba")
+	public String hello() {
+		return "Merhaba";
+	}
 }
