@@ -15,6 +15,14 @@ public class PropertyUpdateMapper implements BaseUpdateMapper<PropertyRequest, P
 
 	@Override
 	public Property toEntityForUpdate(PropertyRequest request, Property entity) {
-		return null;
+
+		if (!request.getKey().isEmpty()) {
+			entity.setKey(request.getKey());
+		}
+
+		if ( !request.getValue().isEmpty() ) {
+			entity.setValue(request.getValue());
+		}
+		return entity;
 	}
 }

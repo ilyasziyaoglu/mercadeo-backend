@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -51,13 +52,31 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-	public ServiceResult<Void> delete(Long id) {
-		ServiceResult<Void> serviceResult = new ServiceResult<>();
+	public ServiceResult<Boolean> delete(Long id) {
+		ServiceResult<Boolean> serviceResult = new ServiceResult<>();
 		try {
 			getRepository().deleteById(id);
+			serviceResult.setValue(true);
 			serviceResult.setHttpStatus(HttpStatus.OK);
 		} catch (Exception e) {
 			serviceResult.setMessage("Entity can not delete by the given id: " + id + ". Error message: " + e.getMessage());
+			serviceResult.setValue(false);
+			serviceResult.setHttpStatus(HttpStatus.NOT_MODIFIED);
+		}
+		return serviceResult;
+	}
+
+	public ServiceResult<Boolean> deleteAll(Set<Long> ids) {
+		ServiceResult<Boolean> serviceResult = new ServiceResult<>();
+		try {
+			ids.forEach(id -> {
+				getRepository().deleteById(id);
+			});
+			serviceResult.setValue(true);
+			serviceResult.setHttpStatus(HttpStatus.OK);
+		} catch (Exception e) {
+			serviceResult.setMessage("Entity can not delete by the given id: " + ids + ". Error message: " + e.getMessage());
+			serviceResult.setValue(false);
 			serviceResult.setHttpStatus(HttpStatus.NOT_MODIFIED);
 		}
 		return serviceResult;

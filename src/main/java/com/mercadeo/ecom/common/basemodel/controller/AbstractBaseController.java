@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -40,9 +41,15 @@ public abstract class AbstractBaseController<
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@Valid @PathVariable Long id) {
-        ServiceResult<Void> serviceResult = getService().delete(id);
-        return new ResponseEntity<>(serviceResult.getHttpStatus());
+    public ResponseEntity<Boolean> delete(@Valid @PathVariable Long id) {
+        ServiceResult<Boolean> serviceResult = getService().delete(id);
+        return new ResponseEntity<>(serviceResult.getValue(), serviceResult.getHttpStatus());
+    }
+
+    @PostMapping("/delete-all")
+    public ResponseEntity<Boolean> delete(@RequestBody Set<Long> ids) {
+        ServiceResult<Boolean> serviceResult = getService().deleteAll(ids);
+        return new ResponseEntity<>(serviceResult.getValue(), serviceResult.getHttpStatus());
     }
 
     @PutMapping

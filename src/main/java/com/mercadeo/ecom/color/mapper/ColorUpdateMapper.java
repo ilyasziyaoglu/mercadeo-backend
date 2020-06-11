@@ -15,6 +15,13 @@ public class ColorUpdateMapper implements BaseUpdateMapper<ColorRequest, Color> 
 
 	@Override
 	public Color toEntityForUpdate(ColorRequest request, Color entity) {
-		return null;
+		if (!request.getName().isEmpty()) {
+			entity.setName(request.getName());
+		}
+
+		if ( !request.getImgUrl().isEmpty() ) {
+			entity.setImgUrl(request.getImgUrl());
+		}
+		return entity;
 	}
 }

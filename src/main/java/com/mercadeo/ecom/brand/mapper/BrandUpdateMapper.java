@@ -15,6 +15,17 @@ public class BrandUpdateMapper implements BaseUpdateMapper<BrandRequest, Brand> 
 
 	@Override
 	public Brand toEntityForUpdate(BrandRequest request, Brand entity) {
-		return null;
+		if (!request.getName().isEmpty()) {
+			entity.setName(request.getName());
+		}
+
+		if ( request.getStatus() != null ) {
+			entity.setStatus(request.getStatus());
+		}
+
+		if ( !request.getLogoImgUrl().isEmpty() ) {
+			entity.setLogoImgUrl(request.getLogoImgUrl());
+		}
+		return entity;
 	}
 }

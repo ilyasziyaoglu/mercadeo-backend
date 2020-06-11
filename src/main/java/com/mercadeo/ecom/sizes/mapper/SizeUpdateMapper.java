@@ -15,6 +15,11 @@ public class SizeUpdateMapper implements BaseUpdateMapper<SizeRequest, Size> {
 
 	@Override
 	public Size toEntityForUpdate(SizeRequest request, Size entity) {
-		return null;
+
+		if (!request.getName().isEmpty()) {
+			entity.setName(request.getName());
+		}
+
+		return entity;
 	}
 }
