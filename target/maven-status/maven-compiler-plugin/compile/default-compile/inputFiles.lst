@@ -22,7 +22,6 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/property/controller/PropertyController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/orderproduct/OrderProductRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/order/db/entity/Order.java
-/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/graphql/ProductMutationResolver.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/db/query/Specification.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/brand/BrandRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/property/response/PropertyResponse.java
@@ -82,7 +81,6 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/sizes/mapper/SizeUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/user/Gender.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/db/repository/ProductColorRepository.java
-/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/graphql/ProductQueryResolver.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/enums/Status.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/service/BaseService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/db/repository/BaseRepository.java

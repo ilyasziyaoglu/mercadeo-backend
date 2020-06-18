@@ -16,8 +16,9 @@ public class CategoryResponse extends BaseResponse {
 
 	private String name;
 	private Integer level;
+	private Integer order;
 	private String imgUrl;
 	private Status status = Status.ACTIVE;
-	private CategoryResponse parent;
-	private Long parentId;
+	private CategoryResponse parent1;
+	private CategoryResponse parent2;
 }

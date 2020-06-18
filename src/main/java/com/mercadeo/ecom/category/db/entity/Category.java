@@ -47,20 +47,19 @@ public class Category extends AbstractBaseEntity {
 	@Column(name = "status")
 	private Status status = Status.ACTIVE;
 
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "parent_id")
-	private Category parent;
+//	@JsonIgnore
+//	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "parent1_id")
+//	private Category parent1;
+//
+//	@JsonIgnore
+//	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "parent2_id")
+//	private Category parent2;
 
 //	@JsonManagedReference
 //	@ManyToOne(mappedBy="parent", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval=true)
 //	private Set<Category> children = new HashSet<>();
-
-	public Long getParentId(){
-		if(getParent() != null)
-			return getParent().getId();
-		return null;
-	}
 
 	@Override
 	public Long getId() {

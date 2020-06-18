@@ -32,7 +32,6 @@ com/mercadeo/ecom/color/service/ColorService.class
 com/mercadeo/ecom/sizes/mapper/SizeMapper.class
 com/mercadeo/ecom/order/service/OrderService.class
 com/mercadeo/ecom/common/basemodel/db/repository/BaseRepository.class
-com/mercadeo/ecom/product/graphql/ProductMutationResolver.class
 com/mercadeo/ecom/client/category/CategoryRequest.class
 com/mercadeo/ecom/common/enums/Status.class
 com/mercadeo/ecom/client/productcolor/ProductColorRequest.class
@@ -50,7 +49,6 @@ com/mercadeo/ecom/sizes/mapper/SizeUpdateMapper.class
 com/mercadeo/ecom/product/mapper/ProductMapperImpl.class
 com/mercadeo/ecom/client/brand/BrandRequest.class
 com/mercadeo/ecom/common/basemodel/request/pager/PageDto.class
-com/mercadeo/ecom/product/graphql/ProductQueryResolver.class
 com/mercadeo/ecom/brand/db/entity/Brand.class
 com/mercadeo/ecom/client/user/Gender.class
 com/mercadeo/ecom/user/service/UserService.class
