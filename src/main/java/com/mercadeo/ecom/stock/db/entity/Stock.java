@@ -29,11 +29,11 @@ public class Stock extends AbstractBaseEntity {
 	@GeneratedValue(generator = "stocks_id_gen", strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "color_id", referencedColumnName = "id")
 	private Color color;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "size_id", referencedColumnName = "id")
 	private Size size;
 

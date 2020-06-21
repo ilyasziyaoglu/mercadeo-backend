@@ -16,6 +16,6 @@ import lombok.EqualsAndHashCode;
 public class StockRequest extends BaseRequest {
 
 	private ColorRequest color;
-	private SizeRequest productSize;
+	private SizeRequest size;
 	private Integer stock;
 }

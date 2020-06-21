@@ -16,6 +16,6 @@ import lombok.EqualsAndHashCode;
 public class StockResponse extends BaseResponse {
 
 	private ColorResponse color;
-	private SizeResponse productSize;
+	private SizeResponse size;
 	private Integer stock;
 }

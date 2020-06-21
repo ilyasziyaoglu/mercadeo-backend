@@ -3,6 +3,8 @@ package com.mercadeo.ecom.common.basemodel.mapper;
 import com.mercadeo.ecom.common.basemodel.db.entity.AbstractBaseEntity;
 import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
 
+import java.util.List;
+
 /**
  * @author Ilyas Ziyaoglu
  * @date 2020-05-21

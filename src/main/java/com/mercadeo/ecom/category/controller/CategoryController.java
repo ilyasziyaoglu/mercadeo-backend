@@ -8,7 +8,12 @@ import com.mercadeo.ecom.client.category.CategoryResponse;
 import com.mercadeo.ecom.client.color.ColorRequest;
 import com.mercadeo.ecom.client.color.ColorResponse;
 import com.mercadeo.ecom.common.basemodel.controller.AbstractBaseController;
+import com.mercadeo.ecom.common.basemodel.service.ServiceResult;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -33,4 +38,12 @@ public class CategoryController extends AbstractBaseController<CategoryRequest, 
 	public CategoryMapper getMapper() {
 		return mapper;
 	}
+
+	@GetMapping(path = "/tree")
+	public ResponseEntity<List<CategoryResponse>> getTree() {
+		ServiceResult<List<CategoryResponse>> serviceResult = service.getTree();
+		return new ResponseEntity<>(serviceResult.getValue(), serviceResult.getHttpStatus());
+	}
+
+
 }

@@ -9,8 +9,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -38,7 +39,7 @@ public class Category extends AbstractBaseEntity {
 	@Column(name = "level")
 	private Integer level;
 
-	@Column(name = "order")
+	@Column(name = "order_value")
 	private Integer order;
 
 	@Column(name = "image")
@@ -47,19 +48,14 @@ public class Category extends AbstractBaseEntity {
 	@Column(name = "status")
 	private Status status = Status.ACTIVE;
 
-//	@JsonIgnore
-//	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//	@JoinColumn(name = "parent1_id")
-//	private Category parent1;
-//
-//	@JsonIgnore
-//	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//	@JoinColumn(name = "parent2_id")
-//	private Category parent2;
+	@JsonManagedReference
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Category parent;
 
-//	@JsonManagedReference
-//	@ManyToOne(mappedBy="parent", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval=true)
-//	private Set<Category> children = new HashSet<>();
+	@JsonIgnore
+	@JsonManagedReference
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+	private List<Category> children = new ArrayList<>();
 
 	@Override
 	public Long getId() {

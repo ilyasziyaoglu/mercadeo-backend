@@ -37,6 +37,8 @@ public class Brand extends AbstractBaseEntity {
 	@Column(name = "status")
 	private Status status;
 
+	@ManyToOne
+
 	@Override
 	public Long getId() {
 		return this.id;

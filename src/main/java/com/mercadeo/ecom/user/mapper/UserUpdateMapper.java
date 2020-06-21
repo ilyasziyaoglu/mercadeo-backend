@@ -15,6 +15,10 @@ public class UserUpdateMapper implements BaseUpdateMapper<UserRequest, User> {
 
 	@Override
 	public User toEntityForUpdate(UserRequest request, User entity) {
-		return null;
+		if (entity == null) {
+			entity = new User();
+		}
+
+		return entity;
 	}
 }

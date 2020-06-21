@@ -2,12 +2,12 @@ package com.mercadeo.ecom.client.product;
 
 import com.mercadeo.ecom.category.db.entity.Category;
 import com.mercadeo.ecom.client.brand.BrandRequest;
+import com.mercadeo.ecom.client.category.CategoryRequest;
 import com.mercadeo.ecom.client.productcolor.ProductColorRequest;
 import com.mercadeo.ecom.client.productsize.SizeRequest;
 import com.mercadeo.ecom.client.stock.StockRequest;
 import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
 import com.mercadeo.ecom.common.enums.Status;
-import com.mercadeo.ecom.productcolor.db.entity.ProductColor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -28,9 +28,9 @@ public class ProductRequest extends BaseRequest {
 	private BrandRequest brand;
 	private String imgUrl;
 	private BigDecimal price;
-	private Category category1;
-	private Category category2;
-	private Category category3;
+	private CategoryRequest category1;
+	private CategoryRequest category2;
+	private CategoryRequest category3;
 	private String collection;
 	private Status status;
 	private List<ProductColorRequest> productColors;

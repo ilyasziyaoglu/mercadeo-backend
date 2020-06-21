@@ -2,10 +2,12 @@ package com.mercadeo.ecom.sizes.db.entity;
 
 
 import com.mercadeo.ecom.common.basemodel.db.entity.AbstractBaseEntity;
+import com.mercadeo.ecom.product.db.entity.Product;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author Ilyas Ziyaoglu

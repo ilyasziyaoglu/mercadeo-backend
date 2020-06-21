@@ -30,7 +30,7 @@ public class ProductColor extends AbstractBaseEntity {
 	@GeneratedValue(generator = "product_colors_id_gen", strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "color_id", referencedColumnName = "id")
 	private Color color;
 

@@ -5,6 +5,8 @@ import com.mercadeo.ecom.common.enums.Status;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.List;
+
 /**
  * @author Ilyas Ziyaoglu
  * @date 2020-04-18
@@ -19,6 +21,6 @@ public class CategoryRequest extends BaseRequest {
 	private Integer order;
 	private String imgUrl;
 	private Status status = Status.ACTIVE;
-	private CategoryRequest parent1;
-	private CategoryRequest parent2;
+	private CategoryRequest parent;
+	private List<CategoryRequest> children;
 }

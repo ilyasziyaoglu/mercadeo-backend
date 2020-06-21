@@ -1,7 +1,7 @@
 package com.mercadeo.ecom.client.product;
 
-import com.mercadeo.ecom.category.db.entity.Category;
 import com.mercadeo.ecom.client.brand.BrandResponse;
+import com.mercadeo.ecom.client.category.CategoryResponse;
 import com.mercadeo.ecom.client.productcolor.ProductColorResponse;
 import com.mercadeo.ecom.client.productsize.SizeResponse;
 import com.mercadeo.ecom.client.stock.StockResponse;
@@ -27,9 +27,9 @@ public class ProductResponse extends BaseResponse {
 	private BrandResponse brand;
 	private String imgUrl;
 	private BigDecimal price;
-	private Category category1;
-	private Category category2;
-	private Category category3;
+	private CategoryResponse category1;
+	private CategoryResponse category2;
+	private CategoryResponse category3;
 	private String collection;
 	private Status status;
 	private List<ProductColorResponse> productColors;

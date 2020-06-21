@@ -5,6 +5,8 @@ import com.mercadeo.ecom.common.enums.Status;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.List;
+
 /**
  * @author Ilyas Ziyaoglu
  * @date 2020-04-18
@@ -19,6 +21,6 @@ public class CategoryResponse extends BaseResponse {
 	private Integer order;
 	private String imgUrl;
 	private Status status = Status.ACTIVE;
-	private CategoryResponse parent1;
-	private CategoryResponse parent2;
+	private CategoryResponse parent;
+	private List<CategoryResponse> children;
 }

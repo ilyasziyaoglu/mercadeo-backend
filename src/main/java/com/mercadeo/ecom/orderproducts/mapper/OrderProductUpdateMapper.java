@@ -15,6 +15,6 @@ public class OrderProductUpdateMapper implements BaseUpdateMapper<OrderProductRe
 
 	@Override
 	public OrderProduct toEntityForUpdate(OrderProductRequest request, OrderProduct entity) {
-		return null;
+		return entity;
 	}
 }

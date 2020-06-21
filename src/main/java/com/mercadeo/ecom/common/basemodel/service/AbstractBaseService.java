@@ -59,6 +59,7 @@ public abstract class AbstractBaseService<
 			serviceResult.setValue(true);
 			serviceResult.setHttpStatus(HttpStatus.OK);
 		} catch (Exception e) {
+			e.printStackTrace();
 			serviceResult.setMessage("Entity can not delete by the given id: " + id + ". Error message: " + e.getMessage());
 			serviceResult.setValue(false);
 			serviceResult.setHttpStatus(HttpStatus.NOT_MODIFIED);
@@ -75,6 +76,7 @@ public abstract class AbstractBaseService<
 			serviceResult.setValue(true);
 			serviceResult.setHttpStatus(HttpStatus.OK);
 		} catch (Exception e) {
+			e.printStackTrace();
 			serviceResult.setMessage("Entity can not delete by the given id: " + ids + ". Error message: " + e.getMessage());
 			serviceResult.setValue(false);
 			serviceResult.setHttpStatus(HttpStatus.NOT_MODIFIED);
@@ -92,6 +94,7 @@ public abstract class AbstractBaseService<
 				serviceResult.setValue(newEntity);
 				serviceResult.setHttpStatus(HttpStatus.OK);
 			} catch (Exception e) {
+				e.printStackTrace();
 				serviceResult.setMessage("Entity can not update with the given id: " + request.getId() + ". Error message: " + e.getMessage());
 				serviceResult.setHttpStatus(HttpStatus.NOT_MODIFIED);
 			}
@@ -109,6 +112,7 @@ public abstract class AbstractBaseService<
 			serviceResult.setValue(entity);
 			serviceResult.setHttpStatus(HttpStatus.CREATED);
 		} catch (Exception e) {
+			e.printStackTrace();
 			serviceResult.setMessage("Entity can not save. Error message: " + e.getMessage());
 			serviceResult.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -122,6 +126,7 @@ public abstract class AbstractBaseService<
 			serviceResult.setValue(entityList.get());
 			serviceResult.setHttpStatus(HttpStatus.OK);
 		} catch (Exception e) {
+			e.printStackTrace();
 			serviceResult.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
 			serviceResult.setMessage(e.getMessage());
 		}

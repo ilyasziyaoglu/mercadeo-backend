@@ -41,8 +41,8 @@ public class Product extends AbstractBaseEntity {
 	@Column(name = "name")
 	private String name;
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "brand_id", referencedColumnName = "id")
+	@ManyToOne
+	@JoinColumn(name = "brand_id")
 	private Brand brand;
 
 	@Column(name = "img_url")
@@ -51,15 +51,15 @@ public class Product extends AbstractBaseEntity {
 	@Column(name = "price")
 	private BigDecimal price;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "category1_id")
 	private Category category1;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "category2_id")
 	private Category category2;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "category3_id")
 	private Category category3;
 
@@ -73,20 +73,20 @@ public class Product extends AbstractBaseEntity {
 	private Status status;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "product_id")
+	@JoinColumn(name = "product_id", nullable = false)
 	private List<ProductColor> productColors;
 
 	@Column(name = "is_colors_optional")
 	private Boolean isColorsOptional = false;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "product_id")
 	private List<Stock> stocks;
 
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "product_sizes",
-			   joinColumns = @JoinColumn(name = "product_id"),
-			   inverseJoinColumns = @JoinColumn(name = "size_id"))
+			   joinColumns = @JoinColumn(name = "product_id", nullable = false),
+			   inverseJoinColumns = @JoinColumn(name = "size_id", nullable = false))
 	private List<Size> sizes;
 
 	@Column(name = "is_sizes_optional")
