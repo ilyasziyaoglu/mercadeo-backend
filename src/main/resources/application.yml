@@ -1,6 +1,6 @@
 spring:
   datasource:
-    password: andrimbavy123
+    password: mercadeo123
     username: postgres
     url: jdbc:postgresql://localhost:5432/mercadeo
     driverClassName: org.postgresql.Driver
