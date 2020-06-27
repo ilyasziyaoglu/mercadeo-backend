@@ -1,6 +1,6 @@
 spring:
   datasource:
-    password: mercadeo123
+    password: andrimbavy123
     username: postgres
     url: jdbc:postgresql://localhost:5432/mercadeo
     driverClassName: org.postgresql.Driver
@@ -16,7 +16,7 @@ spring:
       fail-on-empty-beans: false
 
 server:
-  port: 8001
+  port: 8000
 
 #logging:
 #  level:
