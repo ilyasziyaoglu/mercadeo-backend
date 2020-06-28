@@ -1,10 +1,9 @@
 package com.mercadeo.ecom.productcolor.mapper;
 
 import com.mercadeo.ecom.client.productcolor.ProductColorRequest;
-import com.mercadeo.ecom.color.mapper.ColorUpdateMapper;
+import com.mercadeo.ecom.color.db.repository.ColorRepository;
 import com.mercadeo.ecom.common.basemodel.mapper.BaseUpdateMapper;
 import com.mercadeo.ecom.productcolor.db.entity.ProductColor;
-import com.mercadeo.ecom.sizes.db.entity.Size;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductColorUpdateMapper implements BaseUpdateMapper<ProductColorRequest, ProductColor> {
 
-	final private ColorUpdateMapper colorUpdateMapper;
+	final private ColorRepository colorRepository;
 
 	@Override
 	public ProductColor toEntityForUpdate(ProductColorRequest request, ProductColor entity) {
@@ -30,7 +29,7 @@ public class ProductColorUpdateMapper implements BaseUpdateMapper<ProductColorRe
 		}
 
 		if (request.getColor() != null) {
-			entity.setColor(colorUpdateMapper.toEntityForUpdate(request.getColor(), entity.getColor()));
+			entity.setColor(colorRepository.getOne(request.getColor().getId()));
 		}
 		if (request.getImgUrl() != null) {
 			entity.setImgUrl(request.getImgUrl());

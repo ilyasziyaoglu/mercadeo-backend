@@ -7,6 +7,7 @@ import com.mercadeo.ecom.productcolor.db.entity.ProductColor;
 import com.mercadeo.ecom.productcolor.db.repository.ProductColorRepository;
 import com.mercadeo.ecom.productcolor.mapper.ProductColorMapper;
 import com.mercadeo.ecom.productcolor.mapper.ProductColorUpdateMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,16 +16,11 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class ProductColorService extends AbstractBaseService<ProductColorRequest, ProductColor, ProductColorResponse, ProductColorMapper> {
-	private ProductColorRepository repository;
-	private ProductColorMapper mapper;
-	private ProductColorUpdateMapper updateMapper;
-
-	public ProductColorService(ProductColorRepository repository, ProductColorMapper mapper, ProductColorUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private ProductColorRepository repository;
+	final private ProductColorMapper mapper;
+	final private ProductColorUpdateMapper updateMapper;
 
 	@Override
 	public ProductColorRepository getRepository() {

@@ -1,12 +1,15 @@
 package com.mercadeo.ecom.stock.mapper;
 
 import com.mercadeo.ecom.client.stock.StockRequest;
+import com.mercadeo.ecom.color.db.repository.ColorRepository;
 import com.mercadeo.ecom.color.mapper.ColorUpdateMapper;
 import com.mercadeo.ecom.common.basemodel.mapper.BaseUpdateMapper;
 import com.mercadeo.ecom.productcolor.db.entity.ProductColor;
 import com.mercadeo.ecom.sizes.db.entity.Size;
+import com.mercadeo.ecom.sizes.db.repository.SizeRepository;
 import com.mercadeo.ecom.sizes.mapper.SizeUpdateMapper;
 import com.mercadeo.ecom.stock.db.entity.Stock;
+import com.mercadeo.ecom.stock.db.repository.StockRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -22,19 +25,23 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StockUpdateMapper implements BaseUpdateMapper<StockRequest, Stock> {
 
-	private final ColorUpdateMapper colorMapper;
-	private final SizeUpdateMapper sizeMapper;
+	final private SizeRepository sizeRepository;
+	final private ColorRepository colorRepository;
 
 	@Override
 	public Stock toEntityForUpdate(StockRequest request, Stock entity) {
+		if (entity == null) {
+			entity = new Stock();
+		}
+
 		if (request.getStock() != null) {
 			entity.setStock(request.getStock());
 		}
 		if (request.getColor() != null) {
-			entity.setColor(colorMapper.toEntityForUpdate(request.getColor(), entity.getColor()));
+			entity.setColor(colorRepository.getOne(request.getColor().getId()));
 		}
 		if (request.getSize() != null) {
-			entity.setSize(sizeMapper.toEntityForUpdate(request.getSize(), entity.getSize()));
+			entity.setSize(sizeRepository.getOne(request.getSize().getId()));
 		}
 		return entity;
 	}

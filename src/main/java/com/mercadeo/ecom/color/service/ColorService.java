@@ -8,6 +8,7 @@ import com.mercadeo.ecom.color.mapper.ColorMapper;
 import com.mercadeo.ecom.color.mapper.ColorUpdateMapper;
 import com.mercadeo.ecom.common.basemodel.service.AbstractBaseService;
 import com.mercadeo.ecom.common.basemodel.service.ServiceResult;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -19,16 +20,11 @@ import java.util.Set;
  */
 
 @Service
+@RequiredArgsConstructor
 public class ColorService extends AbstractBaseService<ColorRequest, Color, ColorResponse, ColorMapper> {
-	private ColorRepository repository;
-	private ColorMapper mapper;
-	private ColorUpdateMapper updateMapper;
-
-	public ColorService(ColorRepository repository, ColorMapper mapper, ColorUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private ColorRepository repository;
+	final private ColorMapper mapper;
+	final private ColorUpdateMapper updateMapper;
 
 	@Override
 	public ColorRepository getRepository() {
