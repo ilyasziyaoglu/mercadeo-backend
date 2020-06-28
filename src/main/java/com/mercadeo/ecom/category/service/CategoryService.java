@@ -10,6 +10,7 @@ import com.mercadeo.ecom.client.color.ColorRequest;
 import com.mercadeo.ecom.client.color.ColorResponse;
 import com.mercadeo.ecom.common.basemodel.service.AbstractBaseService;
 import com.mercadeo.ecom.common.basemodel.service.ServiceResult;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -23,16 +24,11 @@ import java.util.stream.Collectors;
  */
 
 @Service
+@RequiredArgsConstructor
 public class CategoryService extends AbstractBaseService<CategoryRequest, Category, CategoryResponse, CategoryMapper> {
-	private CategoryRepository repository;
-	private CategoryMapper mapper;
-	private CategoryUpdateMapper updateMapper;
-
-	public CategoryService(CategoryRepository repository, CategoryMapper mapper, CategoryUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private CategoryRepository repository;
+	final private CategoryMapper mapper;
+	final private CategoryUpdateMapper updateMapper;
 
 	@Override
 	public CategoryRepository getRepository() {
@@ -51,7 +47,7 @@ public class CategoryService extends AbstractBaseService<CategoryRequest, Catego
 
 	public ServiceResult<List<CategoryResponse>> getTree() {
 		ServiceResult<List<CategoryResponse>> serviceResult     = new ServiceResult<>();
-		List<Category>                        categories        = getAll().getValue();
+		List<Category>                        categories        = getAll(null).getValue();
 		List<CategoryResponse>                categoryResponses = categories.stream()
 				.map(mapper::toResponse)
 				.collect(Collectors.toList());

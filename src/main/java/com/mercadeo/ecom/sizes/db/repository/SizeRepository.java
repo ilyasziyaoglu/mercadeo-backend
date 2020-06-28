@@ -4,6 +4,7 @@ import com.mercadeo.ecom.common.basemodel.db.repository.BaseRepository;
 import com.mercadeo.ecom.sizes.db.entity.Size;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -13,5 +14,5 @@ import java.util.Set;
 
 @Repository
 public interface SizeRepository extends BaseRepository<Size> {
-	Set<Size> findByIdIn(Set<Long> ids);
+	List<Size> findByIdIn(Set<Long> ids);
 }

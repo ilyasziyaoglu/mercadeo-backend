@@ -12,6 +12,8 @@ import com.mercadeo.ecom.common.basemodel.mapper.BaseMapper;
 import com.mercadeo.ecom.common.utils.JwtUtil;
 import com.mercadeo.ecom.user.db.entity.User;
 import com.mercadeo.ecom.user.db.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -31,15 +33,21 @@ import java.util.Set;
  * @date 2020-04-18
  */
 
+@RequiredArgsConstructor
 public abstract class AbstractBaseService<
 		Request extends BaseRequest,
 		Entity extends AbstractBaseEntity,
 		Response extends BaseResponse,
 		Mapper extends BaseMapper<Request, Entity, Response>> extends BaseService<Request, Entity, BaseRepository<Entity>, BaseUpdateMapper<Request, Entity>> {
 
+	private JwtUtil jwtUtil;
+
+	@Autowired
+	private UserRepository userRepository;
+
 	public abstract Mapper getMapper();
 
-	public ServiceResult<Entity> get(Long id) {
+	public ServiceResult<Entity> get(String token, Long id) {
 		ServiceResult<Entity> serviceResult = new ServiceResult<>();
 		Optional<Entity>      entity        = getRepository().findById(id);
 		if (entity.isPresent()) {
@@ -52,7 +60,7 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-	public ServiceResult<Boolean> delete(Long id) {
+	public ServiceResult<Boolean> delete(String token, Long id) {
 		ServiceResult<Boolean> serviceResult = new ServiceResult<>();
 		try {
 			getRepository().deleteById(id);
@@ -67,7 +75,7 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-	public ServiceResult<Boolean> deleteAll(Set<Long> ids) {
+	public ServiceResult<Boolean> deleteAll(String token, Set<Long> ids) {
 		ServiceResult<Boolean> serviceResult = new ServiceResult<>();
 		try {
 			ids.forEach(id -> {
@@ -84,7 +92,7 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-	public ServiceResult<Entity> update(@NotNull Request request) {
+	public ServiceResult<Entity> update(String token, @NotNull Request request) {
 		ServiceResult<Entity> serviceResult = new ServiceResult<>();
 		Optional<Entity>      entity        = getRepository().findById(request.getId());
 		if (entity.isPresent()) {
@@ -105,7 +113,7 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-	public ServiceResult<Entity> save(Request request) {
+	public ServiceResult<Entity> save(String token, Request request) {
 		ServiceResult<Entity> serviceResult = new ServiceResult<>();
 		try {
 			Entity entity = getRepository().save(getMapper().toEntity(request));
@@ -119,7 +127,7 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-	public ServiceResult<List<Entity>> getAll() {
+	public ServiceResult<List<Entity>> getAll(String token) {
 		ServiceResult<List<Entity>> serviceResult = new ServiceResult<>();
 		try {
 			Optional<List<Entity>> entityList = Optional.of(getRepository().findAll());
@@ -172,15 +180,21 @@ public abstract class AbstractBaseService<
 		return serviceResult;
 	}
 
-//	public User getUser(HttpServletRequest request) {
-//		final String authorizationHeader = request.getHeader("Authorization");
-//		if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-//			String username = jwtUtil.extractUsername(authorizationHeader.substring(7));
-//			Optional<User> user = userRepository.findByUsername(username);
-//			if (user.isPresent()) {
-//				return user.get();
-//			}
-//		}
-//		return null;
-//	}
+	public User getUser(String token) {
+		if (token != null && token.startsWith("Bearer ")) {
+			String username = getJwtUtil().extractUsername(token.substring(7));
+			Optional<User> user = userRepository.findByUsername(username);
+			if (user.isPresent()) {
+				return user.get();
+			}
+		}
+		return null;
+	}
+
+	public JwtUtil getJwtUtil() {
+		if (jwtUtil == null) {
+			jwtUtil = new JwtUtil();
+		}
+		return jwtUtil;
+	}
 }

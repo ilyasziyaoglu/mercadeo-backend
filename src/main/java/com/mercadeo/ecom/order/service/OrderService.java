@@ -8,13 +8,10 @@ import com.mercadeo.ecom.order.db.entity.Order;
 import com.mercadeo.ecom.order.db.repository.OrderRepository;
 import com.mercadeo.ecom.order.mapper.OrderMapper;
 import com.mercadeo.ecom.order.mapper.OrderUpdateMapper;
-import com.mercadeo.ecom.orderproducts.service.OrderProductService;
 import com.mercadeo.ecom.user.db.entity.User;
-import com.mercadeo.ecom.user.db.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -22,18 +19,11 @@ import java.util.Optional;
  */
 
 @Service
+@RequiredArgsConstructor
 public class OrderService extends AbstractBaseService<OrderRequest, Order, OrderResponse, OrderMapper> {
-	private OrderRepository repository;
-	private OrderMapper mapper;
-	private OrderUpdateMapper updateMapper;
-	private UserRepository userRepository;
-
-	public OrderService(OrderRepository repository, OrderMapper mapper, OrderUpdateMapper updateMapper, UserRepository userRepository) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-		this.userRepository = userRepository;
-	}
+	final private OrderRepository repository;
+	final private OrderMapper mapper;
+	final private OrderUpdateMapper updateMapper;
 
 	@Override
 	public OrderRepository getRepository() {
@@ -51,13 +41,13 @@ public class OrderService extends AbstractBaseService<OrderRequest, Order, Order
 	}
 
 	@Override
-	public ServiceResult<Order> save(OrderRequest request) {
+	public ServiceResult<Order> save(String token, OrderRequest request) {
 		ServiceResult<Order> serviceResult = new ServiceResult<>();
 		Order                entity        = mapper.toEntity(request);
 
-		Optional<User> user = userRepository.findById(request.getUser().getId());
-		if (user.isPresent()) {
-			entity.setUser(user.get());
+		User user = getUser(token);
+		if (user != null) {
+			entity.setUser(user);
 		} else {
 			serviceResult.setHttpStatus(HttpStatus.NOT_FOUND);
 			serviceResult.setMessage("User not found!");

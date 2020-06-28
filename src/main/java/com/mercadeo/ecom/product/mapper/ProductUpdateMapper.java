@@ -3,15 +3,16 @@ package com.mercadeo.ecom.product.mapper;
 import com.mercadeo.ecom.brand.mapper.BrandUpdateMapper;
 import com.mercadeo.ecom.category.mapper.CategoryUpdateMapper;
 import com.mercadeo.ecom.client.product.ProductRequest;
+import com.mercadeo.ecom.client.productsize.SizeRequest;
 import com.mercadeo.ecom.common.basemodel.mapper.BaseUpdateMapper;
 import com.mercadeo.ecom.product.db.entity.Product;
 import com.mercadeo.ecom.productcolor.mapper.ProductColorUpdateMapper;
-import com.mercadeo.ecom.sizes.mapper.SizeUpdateMapper;
+import com.mercadeo.ecom.sizes.db.repository.SizeRepository;
 import com.mercadeo.ecom.stock.mapper.StockUpdateMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Ilyas Ziyaoglu
@@ -25,8 +26,8 @@ public class ProductUpdateMapper implements BaseUpdateMapper<ProductRequest, Pro
 	final private BrandUpdateMapper brandUpdateMapper;
 	final private CategoryUpdateMapper categoryUpdateMapper;
 	final private ProductColorUpdateMapper productColorUpdateMapper;
-	final private SizeUpdateMapper sizeUpdateMapper;
 	final private StockUpdateMapper stockUpdateMapper;
+	final private SizeRepository sizeRepository;
 
 	@Override
 	public Product toEntityForUpdate(ProductRequest request, Product entity) {
@@ -70,7 +71,7 @@ public class ProductUpdateMapper implements BaseUpdateMapper<ProductRequest, Pro
 			entity.setIsSizesOptional(request.getIsSizesOptional());
 		}
 		if (request.getSizes() != null) {
-			entity.setSizes(sizeUpdateMapper.toEntityForUpdate(request.getSizes(), entity.getSizes()));
+			entity.setSizes(sizeRepository.findByIdIn(request.getSizes().stream().map(SizeRequest::getId).collect(Collectors.toSet())));
 		}
 		if (request.getStocks() != null) {
 			entity.setStocks(stockUpdateMapper.toEntityForUpdate(request.getStocks(), entity.getStocks()));

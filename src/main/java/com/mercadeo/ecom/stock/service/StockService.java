@@ -7,6 +7,7 @@ import com.mercadeo.ecom.stock.db.entity.Stock;
 import com.mercadeo.ecom.stock.db.repository.StockRepository;
 import com.mercadeo.ecom.stock.mapper.StockMapper;
 import com.mercadeo.ecom.stock.mapper.StockUpdateMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,16 +16,11 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class StockService extends AbstractBaseService<StockRequest, Stock, StockResponse, StockMapper> {
-	private StockRepository repository;
-	private StockMapper mapper;
-	private StockUpdateMapper updateMapper;
-
-	public StockService(StockRepository repository, StockMapper mapper, StockUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private StockRepository repository;
+	final private StockMapper mapper;
+	final private StockUpdateMapper updateMapper;
 
 	@Override
 	public StockRepository getRepository() {

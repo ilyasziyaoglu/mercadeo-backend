@@ -7,6 +7,7 @@ import com.mercadeo.ecom.orderproducts.db.entity.OrderProduct;
 import com.mercadeo.ecom.orderproducts.db.repository.OrderProductRepository;
 import com.mercadeo.ecom.orderproducts.mapper.OrderProductMapper;
 import com.mercadeo.ecom.orderproducts.mapper.OrderProductUpdateMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,16 +16,11 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class OrderProductService extends AbstractBaseService<OrderProductRequest, OrderProduct, OrderProductResponse, OrderProductMapper> {
-	private OrderProductRepository repository;
-	private OrderProductMapper mapper;
-	private OrderProductUpdateMapper updateMapper;
-
-	public OrderProductService(OrderProductRepository repository, OrderProductMapper mapper, OrderProductUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private OrderProductRepository repository;
+	final private OrderProductMapper mapper;
+	final private OrderProductUpdateMapper updateMapper;
 
 	@Override
 	public OrderProductRepository getRepository() {

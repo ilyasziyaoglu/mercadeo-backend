@@ -31,7 +31,7 @@ public class Order extends AbstractBaseEntity {
 	@GeneratedValue(generator = "order_id_gen", strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
 

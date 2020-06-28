@@ -7,6 +7,7 @@ import com.mercadeo.ecom.sizes.db.entity.Size;
 import com.mercadeo.ecom.sizes.db.repository.SizeRepository;
 import com.mercadeo.ecom.sizes.mapper.SizeMapper;
 import com.mercadeo.ecom.sizes.mapper.SizeUpdateMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,16 +16,11 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class SizeService extends AbstractBaseService<SizeRequest, Size, SizeResponse, SizeMapper> {
-	private SizeRepository repository;
-	private SizeMapper mapper;
-	private SizeUpdateMapper updateMapper;
-
-	public SizeService(SizeRepository repository, SizeMapper mapper, SizeUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private SizeRepository repository;
+	final private SizeMapper mapper;
+	final private SizeUpdateMapper updateMapper;
 
 	@Override
 	public SizeRepository getRepository() {

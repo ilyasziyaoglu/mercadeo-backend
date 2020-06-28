@@ -59,4 +59,6 @@ public class UserService extends AbstractBaseService<UserRequest, User, UserResp
         Optional<User> user = repository.findByUsername(username);
         return user.map(ServiceResult::new).orElseGet(() -> new ServiceResult<>(HttpStatus.NOT_FOUND, "User not found by the username: " + username));
     }
+
+
 }

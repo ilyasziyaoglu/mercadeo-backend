@@ -3,12 +3,15 @@ package com.mercadeo.ecom.common.configs.security;
 import com.mercadeo.ecom.common.webfilters.JwtRequestFilter;
 import com.mercadeo.ecom.user.service.UserService;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -23,6 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	private UserService userService;
 	private JwtRequestFilter jwtRequestFilter;
+	private BCryptPasswordEncoder passwordEncoder;
 
 	public SecurityConfiguration(
 			final UserService userService,
@@ -40,13 +44,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(final HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable().authorizeRequests()
-//				.antMatchers("/auth/**", "/webjars/**", "/swagger*/**", "/v2/api-docs/**").permitAll()
-//				.antMatchers("/**/guest**").permitAll()
-//				.anyRequest().authenticated()
-				.antMatchers("/**").permitAll()
+				.antMatchers("/**/admin**").hasRole("ADMIN")
+				.antMatchers("/user**", "/order**").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/**/guest**", "/auth/**", "/webjars/**", "/swagger*/**", "/v2/api-docs/**").permitAll()
+				.anyRequest().permitAll()
 				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-//				.antMatchers("/admin**").hasRole("ADMIN")
-//				.antMatchers("/profile**").hasAnyRole("ADMIN", "USER")
 
 		http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 	}
@@ -59,6 +61,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public PasswordEncoder getPasswordEncoder() {
-		return NoOpPasswordEncoder.getInstance();
+		if (passwordEncoder == null) {
+			passwordEncoder = new BCryptPasswordEncoder();
+		}
+		return passwordEncoder;
 	}
 }

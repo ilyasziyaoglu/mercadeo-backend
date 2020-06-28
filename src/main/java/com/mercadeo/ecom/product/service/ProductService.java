@@ -52,7 +52,7 @@ public class ProductService extends AbstractBaseService<ProductRequest, Product,
 		return updateMapper;
 	}
 
-	public ServiceResult<PageResource<List<ProductFilterResponse>>> filter(PageDto<ProductFilterRequest> pageDto) {
+	public ServiceResult<PageResource<List<ProductFilterResponse>>> filter(String token, PageDto<ProductFilterRequest> pageDto) {
 		ServiceResult<PageResource<List<ProductFilterResponse>>> serviceResult = new ServiceResult<>();
 		System.out.println("Filter Product Service started");
 

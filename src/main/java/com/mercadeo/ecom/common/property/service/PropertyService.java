@@ -7,6 +7,7 @@ import com.mercadeo.ecom.common.property.mapper.PropertyUpdateMapper;
 import com.mercadeo.ecom.common.property.mapper.PropetyMapper;
 import com.mercadeo.ecom.common.property.request.PropertyRequest;
 import com.mercadeo.ecom.common.property.response.PropertyResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,16 +16,11 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class PropertyService extends AbstractBaseService<PropertyRequest, Property, PropertyResponse, PropetyMapper> {
-    private PropertyRepository repository;
-    private PropetyMapper mapper;
-    private PropertyUpdateMapper updateMapper;
-
-    public PropertyService(PropertyRepository repository, PropetyMapper mapper, PropertyUpdateMapper updateMapper) {
-        this.repository = repository;
-        this.mapper = mapper;
-        this.updateMapper = updateMapper;
-    }
+    final private PropertyRepository repository;
+    final private PropetyMapper mapper;
+    final private PropertyUpdateMapper updateMapper;
 
     @Override
     public PropertyRepository getRepository() {

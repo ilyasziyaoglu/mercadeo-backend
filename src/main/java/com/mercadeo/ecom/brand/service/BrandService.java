@@ -7,6 +7,7 @@ import com.mercadeo.ecom.brand.mapper.BrandUpdateMapper;
 import com.mercadeo.ecom.client.brand.BrandRequest;
 import com.mercadeo.ecom.client.brand.BrandResponse;
 import com.mercadeo.ecom.common.basemodel.service.AbstractBaseService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,16 +16,11 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class BrandService extends AbstractBaseService<BrandRequest, Brand, BrandResponse, BrandMapper> {
-	private BrandRepository repository;
-	private BrandMapper mapper;
-	private BrandUpdateMapper updateMapper;
-
-	public BrandService(BrandRepository repository, BrandMapper mapper, BrandUpdateMapper updateMapper) {
-		this.repository = repository;
-		this.mapper = mapper;
-		this.updateMapper = updateMapper;
-	}
+	final private BrandRepository repository;
+	final private BrandMapper mapper;
+	final private BrandUpdateMapper updateMapper;
 
 	@Override
 	public BrandRepository getRepository() {

@@ -3,9 +3,9 @@ package com.mercadeo.ecom.common.property.controller;
 import com.mercadeo.ecom.common.basemodel.controller.AbstractBaseController;
 import com.mercadeo.ecom.common.property.db.entity.Property;
 import com.mercadeo.ecom.common.property.mapper.PropetyMapper;
-import com.mercadeo.ecom.common.property.service.PropertyService;
 import com.mercadeo.ecom.common.property.request.PropertyRequest;
 import com.mercadeo.ecom.common.property.response.PropertyResponse;
+import com.mercadeo.ecom.common.property.service.PropertyService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,4 +33,5 @@ public class PropertyController extends AbstractBaseController<PropertyRequest, 
 	public PropetyMapper getMapper() {
 		return mapper;
 	}
+
 }

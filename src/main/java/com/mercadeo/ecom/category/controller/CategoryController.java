@@ -39,8 +39,8 @@ public class CategoryController extends AbstractBaseController<CategoryRequest, 
 		return mapper;
 	}
 
-	@GetMapping(path = "/tree")
-	public ResponseEntity<List<CategoryResponse>> getTree() {
+	@GetMapping(path = GUEST + "/tree")
+	public ResponseEntity<List<CategoryResponse>> getTree(@RequestHeader(HEADER_TOKEN) String token) {
 		ServiceResult<List<CategoryResponse>> serviceResult = service.getTree();
 		return new ResponseEntity<>(serviceResult.getValue(), serviceResult.getHttpStatus());
 	}

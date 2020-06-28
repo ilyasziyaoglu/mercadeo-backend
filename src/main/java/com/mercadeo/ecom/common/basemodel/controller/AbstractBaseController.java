@@ -30,43 +30,44 @@ public abstract class AbstractBaseController<
         Service extends AbstractBaseService<Request, Entity, Response, Mapper>> {
 
     public final String GUEST = "/guest";
+    public final String HEADER_TOKEN = "Authorization";
 
     protected abstract Service getService();
     protected abstract Mapper getMapper();
 
     @GetMapping(GUEST + "/{id}")
-    public ResponseEntity<Response> get(@Valid @PathVariable Long id) {
-        ServiceResult<Entity> serviceResult = getService().get(id);
+    public ResponseEntity<Response> get(@RequestHeader(HEADER_TOKEN) String token, @Valid @PathVariable Long id) {
+        ServiceResult<Entity> serviceResult = getService().get(token, id);
         return new ResponseEntity<>(getMapper().toResponse(serviceResult.getValue()), serviceResult.getHttpStatus());
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> delete(@Valid @PathVariable Long id) {
-        ServiceResult<Boolean> serviceResult = getService().delete(id);
+    public ResponseEntity<Boolean> delete(@RequestHeader(HEADER_TOKEN) String token, @Valid @PathVariable Long id) {
+        ServiceResult<Boolean> serviceResult = getService().delete(token, id);
         return new ResponseEntity<>(serviceResult.getValue(), serviceResult.getHttpStatus());
     }
 
     @PostMapping("/delete-all")
-    public ResponseEntity<Boolean> delete(@RequestBody Set<Long> ids) {
-        ServiceResult<Boolean> serviceResult = getService().deleteAll(ids);
+    public ResponseEntity<Boolean> delete(@RequestHeader(HEADER_TOKEN) String token, @RequestBody Set<Long> ids) {
+        ServiceResult<Boolean> serviceResult = getService().deleteAll(token, ids);
         return new ResponseEntity<>(serviceResult.getValue(), serviceResult.getHttpStatus());
     }
 
     @PutMapping
-    public ResponseEntity<Response> update(@RequestBody Request request) {
-        ServiceResult<Entity> serviceResult = getService().update(request);
+    public ResponseEntity<Response> update(@RequestHeader(HEADER_TOKEN) String token, @RequestBody Request request) {
+        ServiceResult<Entity> serviceResult = getService().update(token, request);
         return new ResponseEntity<>(getMapper().toResponse(serviceResult.getValue()), serviceResult.getHttpStatus());
     }
 
     @PostMapping
-    public ResponseEntity<Response> save(@RequestBody Request request) {
-        ServiceResult<Entity> serviceResult = getService().save(request);
+    public ResponseEntity<Response> save(@RequestHeader(HEADER_TOKEN) String token, @RequestBody Request request) {
+        ServiceResult<Entity> serviceResult = getService().save(token, request);
         return new ResponseEntity<>(getMapper().toResponse(serviceResult.getValue()), serviceResult.getHttpStatus());
     }
 
     @GetMapping(GUEST + "/all")
-    public ResponseEntity<List<Response>> getAll() {
-        ServiceResult<List<Entity>> serviceResult = getService().getAll();
+    public ResponseEntity<List<Response>> getAll(@RequestHeader(HEADER_TOKEN) String token) {
+        ServiceResult<List<Entity>> serviceResult = getService().getAll(token);
         return new ResponseEntity<>(getMapper().toResponse(serviceResult.getValue()), serviceResult.getHttpStatus());
     }
 }
