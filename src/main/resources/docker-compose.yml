@@ -9,12 +9,12 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: mercadeo123
+      POSTGRES_PASSWORD: 0ZBZuRt4
 
   sftp:
     image: atmoz/sftp
     volumes:
-    - /Users/ilyas/Desktop/projects/mercadeo/cdn:/home/mercadeo/cdn
+    - /home/ilyasziyaoglu/cdn:/home/mercadeo/cdn
     ports:
       - "2222:22"
     command: mercadeo:mercadeo:1001

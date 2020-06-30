@@ -19,7 +19,7 @@ server:
   port: 8000
 
 sftp:
-  host: localhost
+  host: 34.72.159.36
   port: 2222
   user: mercadeo
   password: mercadeo
