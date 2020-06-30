@@ -12,7 +12,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 @Service
@@ -23,6 +26,45 @@ public class SftpService {
 
     @Value("${sftp.remote.directory.upload}")
     private String sftpRemoteUploadDirectory;
+
+    @Value("${sftp.local.directory.upload}")
+    private String sftpLocaleUploadDirectory;
+
+    public ServiceResult<String> uploadFileLocal(MultipartFile file) {
+        ServiceResult<String> serviceResult = new ServiceResult<>();
+
+        String randomFileName;
+        try {
+            randomFileName = RandomStringUtils.random(32, true, true) + "." + file.getContentType().split("/")[1];
+            new File(sftpLocaleUploadDirectory + randomFileName).createNewFile();
+            file.transferTo(new File(sftpLocaleUploadDirectory + randomFileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+            serviceResult.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            serviceResult.setMessage(e.getMessage());
+            return serviceResult;
+        }
+
+        serviceResult.setValue(randomFileName);
+        serviceResult.setHttpStatus(HttpStatus.OK);
+
+        return serviceResult;
+    }
+
+    public ServiceResult<Boolean> deleteFileLocal(String fileName) {
+        ServiceResult<Boolean> serviceResult = new ServiceResult<>();
+
+        File file = new File(sftpLocaleUploadDirectory + fileName);
+        if (!file.delete()) {
+            serviceResult.setValue(false);
+            serviceResult.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            serviceResult.setMessage("File can not delete form file server!");
+        }
+
+        serviceResult.setValue(true);
+        serviceResult.setHttpStatus(HttpStatus.OK);
+        return serviceResult;
+    }
 
     public ServiceResult<String> uploadFile(MultipartFile file) {
         ServiceResult<String> serviceResult = new ServiceResult<>();
@@ -40,7 +82,6 @@ public class SftpService {
 
             channelSftp = sftpConfig.getSftpSession();
             channelSftp.connect();
-
             channelSftp.put(file.getInputStream(), sftpRemoteUploadDirectory + randomFileName);
         } catch (SftpException | IOException | JSchException e) {
             e.printStackTrace();
