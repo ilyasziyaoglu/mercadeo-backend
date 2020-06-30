@@ -5,8 +5,6 @@ import com.mercadeo.ecom.common.enums.Status;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.Column;
-
 /**
  * @author Ilyas Ziyaoglu
  * @date 2020-04-18

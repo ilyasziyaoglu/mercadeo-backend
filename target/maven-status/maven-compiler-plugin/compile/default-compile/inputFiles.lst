@@ -32,12 +32,14 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/order/db/repository/OrderRepository.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/brand/BrandResponse.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/configs/security/SecurityConfiguration.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/file/FileController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/DtOrderDto.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/category/CategoryRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/service/ServiceResult.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/property/request/PropertyRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/db/query/ProductQuery.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/category/CategoryResponse.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/service/SftpService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/user/mapper/UserUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/mapper/ProductUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/orderproducts/mapper/OrderProductUpdateMapper.java
@@ -56,6 +58,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/mapper/ProductMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/product/db/repository/ProductRepository.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/user/controller/UserController.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/file/FileResponse.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/color/mapper/ColorMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/brand/service/BrandService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/stock/service/StockService.java
@@ -73,6 +76,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/order/service/OrderService.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/controller/ProductColorController.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/mapper/ProductColorMapper.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/configs/sftp/SftpConfig.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/utils/JwtUtil.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/mapper/ProductColorUpdateMapper.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/pager/PageDto.java
@@ -88,6 +92,7 @@
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/client/productfilter/ProductFilterResponse.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/brand/db/entity/Brand.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/property/mapper/PropertyUpdateMapper.java
+/Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/utils/CollectionUtils.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/basemodel/request/BaseRequest.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/productcolor/db/entity/ProductColor.java
 /Users/ilyas/Desktop/projects/mercadeo/mercadeo-backend/src/main/java/com/mercadeo/ecom/common/auth/response/LoginResponse.java

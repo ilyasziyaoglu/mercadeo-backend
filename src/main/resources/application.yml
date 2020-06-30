@@ -18,6 +18,19 @@ spring:
 server:
   port: 8000
 
+sftp:
+  host: localhost
+  port: 2222
+  user: mercadeo
+  password: mercadeo
+  remote:
+    directory:
+      upload: cdn/
+      download: ~/
+  local:
+    directory:
+      download: ~/Downloads/
+
 #logging:
 #  level:
 #    org:

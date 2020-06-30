@@ -38,6 +38,7 @@ com/mercadeo/ecom/client/productcolor/ProductColorRequest.class
 com/mercadeo/ecom/brand/mapper/BrandMapperImpl.class
 com/mercadeo/ecom/category/db/repository/CategoryRepository.class
 com/mercadeo/ecom/color/controller/ColorController.class
+com/mercadeo/ecom/client/file/FileResponse.class
 com/mercadeo/ecom/common/auth/controller/AuthController.class
 com/mercadeo/ecom/common/basemodel/service/ServiceResult.class
 com/mercadeo/ecom/common/basemodel/mapper/BaseUpdateMapper.class
@@ -48,6 +49,7 @@ com/mercadeo/ecom/common/basemodel/request/pager/PageResource.class
 com/mercadeo/ecom/sizes/mapper/SizeUpdateMapper.class
 com/mercadeo/ecom/product/mapper/ProductMapperImpl.class
 com/mercadeo/ecom/client/brand/BrandRequest.class
+com/mercadeo/ecom/file/FileController.class
 com/mercadeo/ecom/common/basemodel/request/pager/PageDto.class
 com/mercadeo/ecom/brand/db/entity/Brand.class
 com/mercadeo/ecom/client/user/Gender.class
@@ -105,6 +107,7 @@ com/mercadeo/ecom/brand/mapper/BrandMapper.class
 com/mercadeo/ecom/common/property/mapper/PropetyMapperImpl.class
 com/mercadeo/ecom/brand/mapper/BrandUpdateMapper.class
 com/mercadeo/ecom/stock/controller/StockController.class
+com/mercadeo/ecom/common/service/SftpService.class
 com/mercadeo/ecom/order/mapper/OrderMapperImpl.class
 com/mercadeo/ecom/common/basemodel/request/pager/DtSearchDto.class
 com/mercadeo/ecom/common/property/mapper/PropertyUpdateMapper.class
@@ -128,6 +131,8 @@ com/mercadeo/ecom/client/product/ProductResponse.class
 com/mercadeo/ecom/common/configs/web/WebConfig.class
 com/mercadeo/ecom/common/basemodel/mapper/BaseMapper.class
 com/mercadeo/ecom/common/basemodel/service/BaseService.class
+com/mercadeo/ecom/common/configs/sftp/SftpConfig.class
 com/mercadeo/ecom/common/auth/request/RegisterRequest.class
+com/mercadeo/ecom/common/utils/CollectionUtils.class
 com/mercadeo/ecom/client/orderproduct/OrderProductRequest.class
 com/mercadeo/ecom/orderproducts/db/entity/OrderProduct.class

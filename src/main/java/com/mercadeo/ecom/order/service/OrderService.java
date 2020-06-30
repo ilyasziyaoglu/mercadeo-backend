@@ -2,6 +2,7 @@ package com.mercadeo.ecom.order.service;
 
 import com.mercadeo.ecom.client.order.OrderRequest;
 import com.mercadeo.ecom.client.order.OrderResponse;
+import com.mercadeo.ecom.client.order.OrderStatus;
 import com.mercadeo.ecom.common.basemodel.service.AbstractBaseService;
 import com.mercadeo.ecom.common.basemodel.service.ServiceResult;
 import com.mercadeo.ecom.order.db.entity.Order;
@@ -53,6 +54,7 @@ public class OrderService extends AbstractBaseService<OrderRequest, Order, Order
 			serviceResult.setMessage("User not found!");
 			return serviceResult;
 		}
+		entity.setStatus(OrderStatus.PREPARING);
 
 		Order save = null;
 		try {

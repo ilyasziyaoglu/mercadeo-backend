@@ -10,6 +10,7 @@ import com.mercadeo.ecom.common.basemodel.request.BaseRequest;
 import com.mercadeo.ecom.common.enums.Status;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -27,6 +28,7 @@ public class ProductRequest extends BaseRequest {
 	private String name;
 	private BrandRequest brand;
 	private String imgUrl;
+	private MultipartFile img;
 	private BigDecimal price;
 	private CategoryRequest category1;
 	private CategoryRequest category2;
